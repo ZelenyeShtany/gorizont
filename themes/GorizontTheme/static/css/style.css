@@ -1,0 +1,93 @@
+.benefits
+{
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    width: 95%;
+    margin: auto;
+}
+
+body {
+    padding: 10px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.benefit
+{
+    height: 150px;
+    text-align: center;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: 50px;
+    display:inline-block;
+}
+
+.benefit h3
+{
+    padding-top: 55px;
+    font-size: 0.9rem
+}
+
+
+.additional-info-block
+{
+    margin-top: 5px;
+    background-position: 3px 5px;
+    background-color: green;
+    height: 150px;
+    background-size: 30px auto;
+    background-repeat: no-repeat !important;
+    padding-left: 40px !important;
+    color: #fff;
+}
+
+@font-face {
+  font-family: "BEBAS NEUE CYRILLIC";
+  src: url("../fonts/BEBAS-NEUE-CYRILLIC.TTF") format("truetype");
+}
+
+@font-face {
+  font-family: "CORBEL";
+  src: url("../fonts/CORBEL.TTF") format("truetype");
+}
+
+@font-face {
+  font-family: "CORBEL BOLD";
+  src: url("../fonts/CORBELB.TTF") format("truetype");
+}
+
+p,a,ul,h3 {
+    font-family: "CORBEL";
+    line-height: 1.0;
+}
+
+
+/* url("../fonts/CORBEL.TTF") format("ttf") */
+.moreinfo:before
+{
+    content: "";
+    display: block;
+    background-image: url("../icons/arrow-right.png");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    width: 23px;
+    height: 20px;
+    float: left;
+}
+
+
+.additional-info-block a {
+    display: block;
+}
+
+.additional-info-block h1 {
+    font-family: "BEBAS NEUE CYRILLIC";
+    line-height: 1.0;
+    margin-top: 5px;
+    font-size: 20px;
+    display: block;
+}
