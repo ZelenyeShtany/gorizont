@@ -32,6 +32,17 @@ body {
     font-size: 0.9rem
 }
 
+.grid-container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: auto auto auto;
+}
+
+.item2
+{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
 
 .additional-info-block
 {
@@ -44,6 +55,8 @@ body {
     padding-left: 40px !important;
     color: #fff;
 }
+
+
 
 @font-face {
   font-family: "BEBAS NEUE CYRILLIC";
