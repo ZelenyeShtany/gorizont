@@ -1,47 +1,49 @@
 .benefits
 {
-    border-color: black;
-    border-width: 1px;
-    border-style: solid;
     width: 95%;
     margin: auto;
+    margin-bottom: 5px;
 }
 
 body {
     padding: 10px;
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
 }
 
 .benefit
 {
-    height: 150px;
     text-align: center;
-    border-color: black;
-    border-width: 1px;
-    border-style: solid;
     background-repeat: no-repeat;
     background-position: 50% 0;
-    background-size: 50px;
+    background-size: auto 45px;
     display:inline-block;
+}
+
+.benefit a
+{
+    color: grey;
 }
 
 .benefit h3
 {
+    font-family: "CORBEL BOLD";
     padding-top: 55px;
-    font-size: 0.9rem
+    font-size: 16px;
 }
 
 
 .additional-info-block
 {
-    margin-top: 5px;
-    background-position: 3px 5px;
+    position:relative;
+    box-sizing: border-box;
+    border: 3px solid white;
+    background-position: 14px 13px;
     background-color: green;
     height: 150px;
     background-size: 30px auto;
     background-repeat: no-repeat !important;
-    padding-left: 40px !important;
+    /*padding-left: 40px !important;*/
     color: #fff;
 }
 
@@ -61,23 +63,49 @@ body {
 }
 
 p,a,ul,h3 {
+    margin: 0;
     font-family: "CORBEL";
     line-height: 1.0;
 }
 
 
-/* url("../fonts/CORBEL.TTF") format("ttf") */
-.moreinfo:before
+.moreinfo
 {
+    padding-left: 12px;
+    font-family: "CORBEL BOLD";
+    text-decoration-line: none;
+    position:absolute;
+    bottom: 5px;
+    left: 5px;
+    display: inline-block;
+    line-height: 1.5;
+}
+
+
+.moreinfo:before {
     content: "";
     display: block;
-    background-image: url("../icons/arrow-right.png");
-    background-repeat: no-repeat;
+    background: url("../icons/arrow-right.png") no-repeat;
+    background-position: 80% 50%;
     background-size: 20px 20px;
-    width: 23px;
+    width: 30px;
     height: 20px;
-    float: left;
+    float: right;
 }
+
+/* url("../fonts/CORBEL.TTF") format("ttf") */
+
+/* .moreinfo:before */
+/* { */
+/*     background-position: center; */
+/*     content: ""; */
+/*     background-image: url("../icons/arrow-right.png"); */
+/*     background-repeat: no-repeat; */
+/*     background-size: 20px 20px; */
+/*     width: 23px; */
+/*     height: 20px; */
+/*     float: right; */
+/* } */
 
 
 .additional-info-block a {
@@ -87,7 +115,8 @@ p,a,ul,h3 {
 .additional-info-block h1 {
     font-family: "BEBAS NEUE CYRILLIC";
     line-height: 1.0;
-    margin-top: 5px;
+    margin-top: 13px;
     font-size: 20px;
     display: block;
+    padding-left: 47px;
 }
