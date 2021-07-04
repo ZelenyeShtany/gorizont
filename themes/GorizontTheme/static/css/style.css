@@ -1,3 +1,48 @@
+.benefit p
+{
+    color: #545454;
+}
+
+.benefit h3
+{
+    font-family: "CORBEL BOLD";
+    padding-top: 55px;
+    font-size: 16px;
+    color: #545454;
+}
+
+h1
+{
+    font-family: "CORBEL";
+    font-size: 24px;
+    color: #545454;
+}
+
+p,a,ul,h3 {
+    margin: 0;
+    font-family: "CORBEL";
+    line-height: 1.0;
+}
+
+.additional-info-block a {
+    display: block;
+}
+
+p.lightgray,li
+{
+    color: #545454;
+}
+
+.additional-info-block h3 {
+    font-family: "BEBAS NEUE CYRILLIC";
+    line-height: 1.0;
+    margin-top: 13px;
+    font-size: 36px;
+    display: block;
+    padding-left: 47px;
+}
+
+/***********************/
 .benefits
 {
     width: 95%;
@@ -7,31 +52,19 @@
 
 body {
     padding: 10px;
-    max-width: 900px;
+    max-width: 1100px;
     margin: auto;
 }
 
 .benefit
-{
+{ 
     text-align: center;
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: auto 45px;
     display:inline-block;
+    margin: auto;
 }
-
-.benefit a
-{
-    color: grey;
-}
-
-.benefit h3
-{
-    font-family: "CORBEL BOLD";
-    padding-top: 55px;
-    font-size: 16px;
-}
-
 
 .additional-info-block
 {
@@ -40,7 +73,7 @@ body {
     border: 3px solid white;
     background-position: 14px 13px;
     background-color: green;
-    height: 150px;
+    height: 180px;
     background-size: 30px auto;
     background-repeat: no-repeat !important;
     /*padding-left: 40px !important;*/
@@ -61,13 +94,6 @@ body {
   font-family: "CORBEL BOLD";
   src: url("../fonts/CORBELB.TTF") format("truetype");
 }
-
-p,a,ul,h3 {
-    margin: 0;
-    font-family: "CORBEL";
-    line-height: 1.0;
-}
-
 
 .moreinfo
 {
@@ -108,15 +134,3 @@ p,a,ul,h3 {
 /* } */
 
 
-.additional-info-block a {
-    display: block;
-}
-
-.additional-info-block h1 {
-    font-family: "BEBAS NEUE CYRILLIC";
-    line-height: 1.0;
-    margin-top: 13px;
-    font-size: 20px;
-    display: block;
-    padding-left: 47px;
-}
