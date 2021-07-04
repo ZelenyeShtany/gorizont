@@ -36,10 +36,10 @@ p.lightgray,li
 .additional-info-block h3 {
     font-family: "BEBAS NEUE CYRILLIC";
     line-height: 1.0;
-    margin-top: 13px;
+    margin-top: 23px;
     font-size: 36px;
     display: block;
-    padding-left: 47px;
+    padding-left: 97px;
 }
 
 /***********************/
@@ -52,7 +52,7 @@ p.lightgray,li
 
 body {
     padding: 10px;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -70,13 +70,12 @@ body {
 {
     position:relative;
     box-sizing: border-box;
-    border: 3px solid white;
-    background-position: 14px 13px;
-    background-color: green;
+    border: 5px solid white;
+    background-position: 24px 23px;
+    background-color: #389101;
     height: 180px;
-    background-size: 30px auto;
+    background-size: 60px auto;
     background-repeat: no-repeat !important;
-    /*padding-left: 40px !important;*/
     color: #fff;
 }
 
@@ -101,12 +100,17 @@ body {
     font-family: "CORBEL BOLD";
     text-decoration-line: none;
     position:absolute;
-    bottom: 5px;
+    bottom: 15px;
     left: 5px;
     display: inline-block;
     line-height: 1.5;
 }
 
+.ourclients
+{
+    border-top: 1px solid #cdcdcd;
+    border-bottom: 1px solid #cdcdcd;
+}
 
 .moreinfo:before {
     content: "";
