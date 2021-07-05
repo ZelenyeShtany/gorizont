@@ -4,7 +4,6 @@
 .slideshow-container {
     background: url("../slideshow/images/background.png") no-repeat;
     /* background-position: 80% 50%; */
-    border: 1px solid black;
     background-size: contain;
     position: relative;
     margin: auto;
@@ -20,7 +19,6 @@
     position: relative;
     min-height: 80%;
     min-width: 100%;
-    border: 1px solid black;
     background-repeat: no-repeat;
     /* background-size: auto 50%; */
     background-position: 85% 50%;
