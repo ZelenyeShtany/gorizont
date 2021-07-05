@@ -4,25 +4,27 @@
 .slideshow-container {
     background: url("../slideshow/images/background.png") no-repeat;
     /* background-position: 80% 50%; */
+    border: 1px solid black;
     background-size: contain;
     position: relative;
     margin: auto;
     height: 366px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Hide the images by default */
 .mySlides {
-    position: relative;
     display: none;
+    position: relative;
+    min-height: 80%;
+    min-width: 100%;
+    border: 1px solid black;
+    background-repeat: no-repeat;
+    /* background-size: auto 50%; */
+    background-position: 85% 50%;
 }
-.mySlides img {
-    position: absolute;
-    right: 0;
-    height: 340px;
-    padding: 100% 0;
-}
-
-
 
 /* Next & previous buttons */
 .prev, .next {
@@ -43,8 +45,13 @@
 /* Position the "next button" to the right */
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
 }
+
+.prev {
+  left: 0;
+}
+
+
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
@@ -71,20 +78,28 @@
   top: 0;
 }
 
+.dot-container
+{
+    transform: translate(-50%,0);
+    position: absolute;
+    left: 50%;
+    bottom: 3%;
+}
+
 /* The dots/bullets/indicators */
 .dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+    cursor: pointer;
+    height: 7px;
+    width: 7px;
+    margin: 0 2px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid white;
+    transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+    background-color: white;
 }
 
 /* Fading animation */
