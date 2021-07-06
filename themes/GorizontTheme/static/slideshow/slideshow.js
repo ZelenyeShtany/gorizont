@@ -4,11 +4,15 @@ showSlides(slideIndex);
 // Next/previous controls
 function plusSlides(n) {
     showSlides(slideIndex += n);
+    clearInterval(interval);
+    interval = setInterval(function(){ showSlides(++slideIndex) }, 5000);
 }
 
 // Thumbnail image controls
 function currentSlide(n) {
     showSlides(slideIndex = n);
+    clearInterval(interval);
+    interval = setInterval(function(){ showSlides(++slideIndex) }, 5000);
 }
 
 function showSlides(n) {
@@ -25,8 +29,7 @@ function showSlides(n) {
     }
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
-    slideIndex++;
 }
 
 // automatically show next slide every 2 seconds
-setInterval(function(){ showSlides(slideIndex) }, 5000);
+var interval = setInterval(function(){ showSlides(++slideIndex) }, 5000);
