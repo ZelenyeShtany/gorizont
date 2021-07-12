@@ -1,0 +1,146 @@
+{{ define "main" }}
+<h1 class="title">{{ .Site.Title }}</h1>
+<a>
+  {{ .Content }}
+</a>
+
+<div class="w3-row-padding">
+  <div class="service-menu w3-quarter">
+    <a onclick="choose_service(1)" href="javascript:void(0)">Широкоформатная печать</a>
+    <a onclick="choose_service(2)" href="javascript:void(0)">Лазерная резка и гравировка</a>
+    <a onclick="choose_service(3)" href="javascript:void(0)">Сувениры, подарки, награды</a>
+    <a onclick="choose_service(4)" href="javascript:void(0)">Наружная и внутренняя реклама</a>
+    <a onclick="choose_service(5)" href="javascript:void(0)">Брендирование одежды</a>
+    <a onclick="choose_service(6)" href="javascript:void(0)">Печать на спортивной форме</a>
+    <a onclick="choose_service(7)" href="javascript:void(0)">Шевроны, матчи, нашивки</a>
+    <a onclick="choose_service(8)" href="javascript:void(0)">Оперативная полиграфия</a>
+  </div>
+
+  <div class="service w3-threequarter">
+    Широкоформатная печать
+    <table>
+      <tr>
+	<td> <p> Баннерная ткань </p></td>
+	<td>
+	  <p>Для уличного и интерьерного применения - баннеры любых размеров,
+	    перетяжки, пресс-стены, Х-стойки и т.д.
+	    Дополнительная обработка: проклейка края, установка люверсов, склейка
+	</p></td>
+      </tr>
+      <tr>
+	<td> <p> Самоклеящаяся пленка </p></td> <td><p>Для оформления витрин, стекол, а также для различных ихделий с ровной поверхностью.
+</p></td>
+      </tr>
+      <tr>
+	<td> <p> Прозрачная и перфопленка </p></td> <td><p>Для декорирования окон, витражей и других стеклянных поверхностей, прозрачность которых необходимо сохранить.
+</p></td>
+      </tr>
+
+      <tr>
+	<td> <p> Фотобумага </p></td> <td><p> Для оформления помещений - большие рекламные постеры, плакаты</p></td>
+      </tr>
+
+      <tr>
+	<td> <p> Рулонная бумага </p></td> <td><p>Для печати схем, планов, географических карт.</p></td>
+      </tr>
+
+      <tr>
+	<td> <p> Флаговая бумага </p></td> <td><p>Для изготовления уличных и интерьерных фирменных флагов.</p></td>
+      </tr>
+
+      <tr>
+	<td> <p> Баннерная сетка </p></td> <td><p>Перфорированный баннер для декоративного ограждения
+	    объектов и использования в рекламных целях с сохранением доступа к свету.
+</p></td>
+      </tr>
+    </table>
+  </div>
+  
+  <div class="service w3-threequarter">
+    <tr>
+      <td> Самоклеящаяся пленка </td> <td><p>Для уличного и интерьерного применения</p></td>
+    </tr>
+</div>
+
+  <div class="service w3-threequarter">
+    <tr>
+<td> Прозрачная и перфопленка </td> <td><p>Для уличного и интерьерного применения</p></td>
+    </tr>
+</div>
+
+  <div class="service w3-threequarter">
+    <tr>
+<td> Фотобумага </td> <td><p>Для уличного и интерьерного применения</p></td>
+    </tr>
+</div>
+
+  <div class="service w3-threequarter">
+    <tr>
+<td> Рулонная бумага </td> <td><p>Для уличного и интерьерного применения</p></td>
+    </tr>
+</div>
+
+  <div class="service w3-threequarter">
+    <tr>
+<td> Флаговая бумага </td> <td><p>Для уличного и интерьерного применения</p></td>
+    </tr>
+</div>
+
+  <div class="service w3-threequarter">
+    <tr>
+<td> Баннерная сетка </td> <td><p>Для уличного и интерьерного применения</p></td>
+    </tr>
+</div>
+
+  <div class="service w3-threequarter">
+    <tr>
+<td> Баннерная ткань </td> <td><p>Для уличного и интерьерного применения</p></td>
+    </tr>
+</div>
+</div>
+
+<script type="application/javascript">
+
+  function findGetParameter(parameterName) {
+      var result = null,
+          tmp = [];
+      location.search
+          .substr(1)
+          .split("&")
+          .forEach(function (item) {
+              tmp = item.split("=");
+              if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+          });
+      return result;
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+      if (findGetParameter("index"))
+      {
+	  choose_service(findGetParameter("index"));
+      }
+      else
+      {
+	  choose_service(1);
+      }
+  }, false);
+
+  function choose_service(n) {
+      var i;
+      var services = document.getElementsByClassName("service");
+      var menu_items = document.querySelectorAll(".service-menu a");
+
+      if (n > services.length) {n = 1}
+      if (n < 1) {n = services.length}
+      for (i = 0; i < services.length; i++) {
+	  services[i].style.display = "none";
+      }
+      for (i = 0; i < menu_items.length; i++) {
+	  menu_items[i].className = menu_items[i].className.replace(" active", "");
+      }
+      services[n-1].style.display = "block";
+      menu_items[n-1].className += " active";
+  }
+</script>
+
+{{ end }}
