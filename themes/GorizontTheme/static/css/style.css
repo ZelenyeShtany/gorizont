@@ -60,6 +60,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    margin-bottom: 15px;
 }
 
 /* td,tr,table { */
@@ -322,3 +323,9 @@ body {
 }
 
 
+.breadcrumbs
+{
+    color: #7a7a7a;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}

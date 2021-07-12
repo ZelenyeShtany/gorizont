@@ -6,11 +6,13 @@ function toggle_expand()
     if (clients_div_expanded == 0)
     {
 	logos[0].style.maxHeight = '700px';
+	document.getElementsByClassName("showmore")[0].innerHTML = "Скрыть";
 	clients_div_expanded = 1;
     }
     else
     {
 	logos[0].style.maxHeight = '85px';
+	document.getElementsByClassName("showmore")[0].innerHTML = "Показать еще";
 	clients_div_expanded = 0;
     }
 }
