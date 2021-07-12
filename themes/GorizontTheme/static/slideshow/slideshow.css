@@ -124,8 +124,8 @@
 /* The dots/bullets/indicators */
 .dot {
     cursor: pointer;
-    height: 7px;
-    width: 7px;
+    height: 15px;
+    width: 15px;
     margin: 0 2px;
     border-radius: 50%;
     display: inline-block;
