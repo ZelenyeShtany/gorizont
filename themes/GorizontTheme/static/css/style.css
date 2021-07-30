@@ -411,4 +411,22 @@ body {
 	border-left: none;
 	border-right: none;
     }
+
+    .slideshow-container
+    {
+	/* position: static!important; */
+	text-align: center;
+    }
+    
+    .text-container {
+	position: static!important;
+	width: 100%!important;
+	display: block!important;
+    }
+
+    .slideshow-container img {
+	position: static!important;
+	top: none!important;
+	transform: none!important;
+    }
 }
