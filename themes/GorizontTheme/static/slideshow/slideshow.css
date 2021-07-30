@@ -79,17 +79,17 @@
 .slideshow-container img
 {
     margin: auto;
-    border: 1px solid black;
-    width: 20%;
-    min-width: 250px;
+    /* border: 1px solid black; */
+    /* width: 20%; */
+    min-width: 350px;
     display: inline-block;
 }
 
 .text-container
 {
     flex-shrink: 1;
-    border: 1px solid black;
-    width: 75%;
+    /* border: 1px solid black; */
+    width: 60%;
     display: inline-block;
     position: static;
     top: 50px;
@@ -100,14 +100,14 @@
 .slideshow-dark-text
 {
   color: #3b3d3e;
-  font-size: 36px;
+  font-size: 3vw; 		/*36px*/
   font-family: "CORBEL BOLD";
 }
 
 .slideshow-light-text
 {
     color: #fdfdfd;
-    font-size: 22px;
+    font-size: 1.8vw;		/*22px*/
     padding-top: 20px;
     font-family: "CORBEL BOLD";
 }

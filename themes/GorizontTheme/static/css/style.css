@@ -173,6 +173,10 @@ body {
     margin: auto;
 }
 
+/* .additional-info-blocks-container w3-third:first-child { */
+    
+/* } */
+
 .additional-info-block
 {
     position:relative;
@@ -184,6 +188,10 @@ body {
     background-size: 60px auto;
     background-repeat: no-repeat !important;
     color: #fff;
+}
+
+.additional-descr {
+    text-align: right;
 }
 
 @font-face {
@@ -390,5 +398,17 @@ body {
     }
     .social-mobile {
 	display: block;
+    }
+}
+
+
+@media only screen and (max-width: 850px) {
+    .additional-descr
+    {
+	display: none !important;
+    }
+    .additional-info-block {
+	border-left: none;
+	border-right: none;
     }
 }
