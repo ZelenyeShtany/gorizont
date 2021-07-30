@@ -4,13 +4,18 @@
 .slideshow-container {
     background: url("../slideshow/images/background.png") no-repeat;
     /* background-position: 80% 50%; */
-    background-size: contain;
+    background-size: auto 100%;
     position: relative;
     margin: auto;
-    height: 366px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* height: 366px; */
+    min-height: 366px;
+    padding-bottom: 45px;
+    height: auto;
+    text-align: center;
+    /* flex-direction: row; */
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    
 }
 
 /* Hide the images by default */
@@ -71,11 +76,25 @@
     background-color: #FEA916;
 }
 
+.slideshow-container img
+{
+    margin: auto;
+    border: 1px solid black;
+    width: 20%;
+    min-width: 250px;
+    display: inline-block;
+}
+
 .text-container
 {
-  position: absolute;
-  top: 50px;
-  left: 90px;
+    flex-shrink: 1;
+    border: 1px solid black;
+    width: 75%;
+    display: inline-block;
+    position: static;
+    top: 50px;
+    left: 90px;
+    text-align: left;
 }
 
 .slideshow-dark-text

@@ -57,6 +57,9 @@
 }
 
 .header {
+    width: 95%;
+    margin: auto;
+    /* border: 1px solid black; */
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -67,17 +70,33 @@
 /*     border: 1px solid black; */
 /* } */
 
-.contacts
-{
-    color: #545454;
-    width: 75%;
-    display: flex;
-    align-items: flex-end;
-    font-family: 'Arial';
-}
+/* .contacts */
+/* { */
+/*     color: #545454; */
+/*     width: 75%; */
+/*     display: flex; */
+/*     align-items: flex-end; */
+/*     font-family: 'Arial'; */
+/* } */
+
+
 .social,.telephone,.address {
+    width: 200px;
     background-size: 35px auto;
     background-repeat: no-repeat;
+}
+
+.social {
+    display: inline-block;
+    table-layout: fixed;
+    padding: 0;
+    line-height: 1;
+    margin: 0
+}
+
+.social-mobile {
+    display: none;
+    
 }
 
 .social a {
@@ -304,14 +323,15 @@ body {
 }
 
 .service-menu a {
-  background-color: white; /* Grey background color */
-  color: #7a7a7a; /* Black text color */
-  display: block; /* Make the links appear below each other */
-  padding: 12px; /* Add some padding */
-  text-decoration: none; /* Remove underline from links */
-  margin: 0;
-  border-bottom: 1px solid #d3d3d3;
-  font-size: 18px;
+    font-family: "BEBAS NEUE CYRILLIC";
+    background-color: white; /* Grey background color */
+    color: #7a7a7a; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+    margin: 0;
+    border-bottom: 1px solid #d3d3d3;
+    font-size: 20px;
 }
 
 .service-menu a:hover {
@@ -322,10 +342,53 @@ body {
   color: orange; /* Add a green color to the "active/current" link */
 }
 
-
 .breadcrumbs
 {
     color: #7a7a7a;
     margin-left: 10px;
     margin-bottom: 10px;
+}
+
+.ourworks {
+    background: orange;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: white;
+    font-family: 'CORBEL BOLD';
+    font-size: 20px;
+}
+
+/* END SERVICES PAGE */
+
+
+/* Полный цикл работ */
+
+.cycle {
+    background-color: #d6d6d6;
+    padding: 20px;
+    text-align: center;
+}
+
+.cycle a {
+    font-family: "CORBEL BOLD";
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-image: url('');
+    background-position: 50% 0;
+    font-size: 20px;
+    padding-top: 50px;
+    color: #3c3d41;
+}
+
+/* END Полный цикл работ */
+
+@media only screen and (max-width: 750px) {
+  /* For mobile phones: */
+    .header .social,.telephone {
+	display: none;
+    }
+    .social-mobile {
+	display: block;
+    }
 }
