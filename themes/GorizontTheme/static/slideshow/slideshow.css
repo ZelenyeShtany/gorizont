@@ -100,14 +100,14 @@
 .slideshow-dark-text
 {
   color: #3b3d3e;
-  font-size: 3vw; 		/*36px*/
+  font-size: 2em; 		/*36px*/
   font-family: "CORBEL BOLD";
 }
 
 .slideshow-light-text
 {
     color: #fdfdfd;
-    font-size: 1.8vw;		/*22px*/
+    font-size: 1.375em;		/*22px;1.8vw*/
     padding-top: 20px;
     font-family: "CORBEL BOLD";
 }
