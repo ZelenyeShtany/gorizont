@@ -11,6 +11,7 @@
 
 .benefit p
 {
+    font-size: 1em;
     color: #545454;
 }
 
@@ -18,7 +19,7 @@
 {
     font-family: "CORBEL BOLD";
     padding-top: 55px;
-    font-size: 16px;
+    font-size: 1em;
     color: #545454;
 }
 
@@ -144,7 +145,7 @@ p.lightgray,li
     font-family: "BEBAS NEUE CYRILLIC";
     line-height: 1.0;
     margin-top: 23px;
-    font-size: 36px;
+    font-size: 2em;		/*36px*/
     display: block;
     padding-left: 97px;
 }
@@ -155,6 +156,8 @@ p.lightgray,li
     width: 95%;
     margin: auto;
     margin-bottom: 5px;
+    /* border: 1px solid black; */
+    text-align: center;
 }
 
 body {
@@ -164,13 +167,16 @@ body {
 }
 
 .benefit
-{ 
+{
+    vertical-align: top;
+    width: 24%;
     text-align: center;
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: auto 45px;
     display:inline-block;
     margin: auto;
+    font-size: ;
 }
 
 /* .additional-info-blocks-container w3-third:first-child { */
@@ -428,5 +434,10 @@ body {
 	position: static!important;
 	top: none!important;
 	transform: none!important;
+    }
+
+    .benefit {
+	width: 45%;
+	/* border: 1px solid black; */
     }
 }
