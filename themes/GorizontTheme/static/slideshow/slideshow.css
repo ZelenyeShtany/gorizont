@@ -87,7 +87,7 @@
 
 .text-container
 {
-    padding: 35px 0 0 35px;
+    padding: 5% 0 0 5%;
     width: 64%;
     /* border: 1px solid black; */
     display: inline-block;
@@ -108,7 +108,7 @@
 {
     color: #fdfdfd;
     font-size: 1.375em;		/*22px;1.8vw*/
-    padding-top: 20px;
+    padding-top: 5%;
     font-family: "CORBEL BOLD";
 }
 
