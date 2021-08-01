@@ -71,36 +71,29 @@
     margin-bottom: 15px;
 }
 
-/* td,tr,table { */
+.logo {
+    min-width: 200px;
+    display: inline-block;
+}
+
+/* .header div { */
 /*     border: 1px solid black; */
 /* } */
 
-/* .contacts */
-/* { */
-/*     color: #545454; */
-/*     width: 75%; */
-/*     display: flex; */
-/*     align-items: flex-end; */
-/*     font-family: 'Arial'; */
-/* } */
-
-
-.social,.telephone,.address {
+.telephone,.address {
     width: 200px;
     background-size: 35px auto;
     background-repeat: no-repeat;
 }
 
 .social {
+    min-width: 90px;
     display: inline-block;
-    table-layout: fixed;
-    padding: 0;
-    line-height: 1;
-    margin: 0
+    text-align: right;
 }
 
-.social-mobile img {
-    width: 20%;
+.social img {
+    width: 25px;
     height: auto;
 }
 
@@ -109,8 +102,7 @@
     
 }
 
-.social img { width: 25px; height: auto; }
-q.telephone:before,.address:before {
+.telephone:before,.address:before {
     content: "";
     display: block;
     background-repeat: no-repeat;
@@ -458,19 +450,32 @@ body {
 
 @media only screen and (max-width: 750px) {
     /* For mobile phones: */
-    .header .social,.telephone {
+    .telephone {
 	display: none;
     }
-    .social-mobile {
+
+    .header {
 	display: block;
+	text-align: center;
+	vertical-align: middle;
+    }
+    
+    .logo {
+	display: block;
+    }
+
+    .social {
+	width: 49%;
+    }
+    
+    .address {
+	font-size: 0.85em;
+	width: 49%;
+	display: inline-block;
     }
 }
 
 @media only screen and (max-width: 420px) {
-    .footer {
-	display: block;
-	
-    }
     .footer div {
 	display: block;
 	width: 100%;
