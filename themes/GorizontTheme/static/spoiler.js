@@ -5,7 +5,7 @@ function toggle_expand()
     var logos = document.getElementsByClassName('clients-logos');
     if (clients_div_expanded == 0)
     {
-	logos[0].style.maxHeight = '700px';
+	logos[0].style.maxHeight = '3000px';
 	document.getElementsByClassName("showmore")[0].innerHTML = "Скрыть";
 	clients_div_expanded = 1;
     }
