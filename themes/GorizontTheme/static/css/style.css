@@ -52,7 +52,7 @@
     filter: grayscale(100%);
     height: 80px; 
     width: auto;
-    transition: 1.5s ease;
+    transition: 0.3s ease;
 }
 
 
@@ -264,7 +264,7 @@ body {
 
     background-color: #3b3d3e;
     color: #fefefe;
-    padding:0;
+    padding:10px;
     margin: auto;
     margin-top: 20px;
 }
@@ -277,6 +277,7 @@ body {
 }
 
 .footer div:last-child {
+    padding-bottom: 10px;
     width: auto;
     max-width: 200px;
     text-align: center;
@@ -356,7 +357,8 @@ body {
 }
 
 .service-menu a:hover {
-  background-color: #ccc; /* Dark grey background on mouse-over */
+    color: orange;
+  /* background-color: #ccc; /\* Dark grey background on mouse-over *\/ */
 }
 
 .service-menu a.active {
@@ -386,7 +388,7 @@ body {
 /* Полный цикл работ */
 
 .cycle {
-    background-color: #d6d6d6;
+    background-color: #f0f0f0; /* #d6d6d6 */
     padding: 20px;
     text-align: center;
 }
@@ -398,7 +400,7 @@ body {
     background-image: url('');
     background-position: 50% 0;
     font-size: 20px;
-    padding-top: 50px;
+    padding-top: 55px;
     color: #3c3d41;
 }
 
@@ -427,7 +429,8 @@ body {
     .slideshow-container
     {
 	/* position: static!important; */
-	text-align: center;
+	text-align: center!important;
+	min-height: 580px!important;
     }
     
     .text-container {
@@ -485,6 +488,12 @@ body {
 
 
 @media only screen and (max-width: 320px) {
+    .slideshow-container
+    {
+	/* position: static!important; */
+	min-height: 490px!important;
+    }
+
     .additional-info-block {
 	background-position: 8% 23px;
 	background-size: 15% auto;
