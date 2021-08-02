@@ -92,13 +92,12 @@
 
 .social {
     border: 1px solid black;
-    min-width: 90px;
     display: inline-block;
     text-align: right;
 }
 
 .social img {
-    width: 25px;
+    width: 30px;
     height: auto;
 }
 
@@ -563,7 +562,7 @@ body {
 	border: 1px solid black;
 	font-size: 0.85em;
 	display: inline-block;
-	width: calc(100% - 95px);
+	width: calc(100% - 120px);
     }
 }
 
