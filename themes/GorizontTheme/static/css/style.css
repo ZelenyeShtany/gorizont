@@ -81,10 +81,13 @@
 /* } */
 
 .telephone,.address {
+    text-align: left;
     width: 200px;
     background-size: 35px auto;
     background-repeat: no-repeat;
 }
+
+/* SOCIAL NETWORKS LINKS */
 
 .social {
     min-width: 90px;
@@ -101,6 +104,45 @@
     text-decoration: none;
     
 }
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    box-sizing: content-box;
+    display: none;
+    min-width: 120px;
+    background-color: white;
+    text-align: center;
+    padding: 5px;
+    color: black;
+    /* border-radius: 6px; */
+    border: 2px solid green;
+    border-right: 2px solid green;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltiptext a {
+    display: block;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    top: 100%;
+    right: 1px;
+}
+
+/* SOCIAL NETWORKS LINKS END */
 
 .telephone:before,.address:before {
     content: "";
@@ -175,6 +217,19 @@ body {
     font-size: ;
 }
 
+
+.moreinfo:before {
+    content: "";
+    display: block;
+    background: url("../icons/arrow-right.png") no-repeat;
+    background-position: 80% 50%;
+    background-size: 20px 20px;
+    width: 30px;
+    height: 20px;
+    float: right;
+}
+
+
 .additional-info-block
 {
     position:relative;
@@ -219,11 +274,21 @@ body {
     line-height: 1.5;
 }
 
-.about ul {
-    padding:0px;
-    margin-top: 10px;
+/* О КОМПАНИИ */
+.benefits-list {
+    border: 1px solid black;
+    padding-left: 50px!important;
 }
 
+.benefits-list li:first-child
+{
+    list-style-type: none;
+    font-family: 'CORBEL BOLD';
+    margin-bottom: 3px;
+}
+/* О КОМПАНИИ END */
+
+/* НАШИ КЛИЕНТЫ */
 .ourclients
 {
     display: block;
@@ -231,15 +296,15 @@ body {
     border-bottom: 1px solid #cdcdcd;
 }
 
-.moreinfo:before {
-    content: "";
+
+.showmore
+{
     display: block;
-    background: url("../icons/arrow-right.png") no-repeat;
-    background-position: 80% 50%;
-    background-size: 20px 20px;
-    width: 30px;
-    height: 20px;
-    float: right;
+    margin: auto;
+    margin-bottom: 15px;
+    width: 150px;
+    background-color: #389101;
+    color: white;
 }
 
 /* url("../fonts/CORBEL.TTF") format("ttf") */
@@ -257,6 +322,10 @@ body {
 /* } */
 
 
+/* НАШИ КЛИЕНТЫ END */
+
+/* FOOTER */
+
 .footer {
     display: flex;
     flex-flow: row wrap;
@@ -269,14 +338,14 @@ body {
     margin-top: 20px;
 }
 
-.footer div {
+.footer > div {
     margin: auto;
     display: inline-block;
     width: 200px;
     /* border: 1px solid black; */
 }
 
-.footer div:last-child {
+.footer > div:last-child {
     padding-bottom: 10px;
     width: auto;
     max-width: 200px;
@@ -295,19 +364,11 @@ body {
     font-family: 'CORBEL BOLD';
 }
 
+
+/* FOOTER END */
+
 /* position: absolute;left: 50%;transform: translate(-50%, 0);  */
   
-
-.showmore
-{
-    display: block;
-    margin: auto;
-    margin-bottom: 15px;
-    width: 150px;
-    background-color: #389101;
-    color: white;
-}
-
 
 /* SERVICES PAGE */
 
