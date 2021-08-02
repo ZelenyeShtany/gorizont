@@ -60,6 +60,7 @@
 {
     filter: none;
 }
+/* HEADER */
 
 .header {
     width: 95%;
@@ -90,6 +91,7 @@
 /* SOCIAL NETWORKS LINKS */
 
 .social {
+    border: 1px solid black;
     min-width: 90px;
     display: inline-block;
     text-align: right;
@@ -121,7 +123,7 @@
     padding: 5px;
     color: black;
     /* border-radius: 6px; */
-    border: 2px solid green;
+    border-left: 2px solid green;
     border-right: 2px solid green;
     /* Position the tooltip text - see examples below! */
     position: absolute;
@@ -157,6 +159,7 @@
 .address:before{ background-image: url('../icons/adres.png');}
 .contacts p{display: inline-block; font-family: 'Arial';}
 
+/* HEADER END */
 h1
 {
     font-family: "CORBEL";
@@ -531,8 +534,18 @@ body {
     .social {
 	width: 49%;
     }
+
+    .address:before {
+	display: none;
+	/* width: 0px; */
+	/* height: 0px; */
+	background: none;
+    }
+
+    
     
     .address {
+	border: 1px solid black;
 	font-size: 0.85em;
 	width: 49%;
 	display: inline-block;
