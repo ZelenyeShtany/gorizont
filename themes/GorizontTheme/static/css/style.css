@@ -91,7 +91,6 @@
 /* SOCIAL NETWORKS LINKS */
 
 .social {
-    border: 1px solid black;
     display: inline-block;
     text-align: right;
 }
@@ -116,7 +115,7 @@
 .tooltip .tooltiptext {
     box-sizing: content-box;
     display: none;
-    min-width: 120px;
+    min-width: 90px;
     background-color: white;
     text-align: center;
     padding: 5px;
@@ -529,7 +528,7 @@ body {
 }
 
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 800px) {
     /* For mobile phones: */
     .telephone {
 	display: none;
@@ -559,10 +558,9 @@ body {
     
     
     .address {
-	border: 1px solid black;
 	font-size: 0.85em;
 	display: inline-block;
-	width: calc(100% - 120px);
+	width: calc(100% - 110px);
     }
 }
 
