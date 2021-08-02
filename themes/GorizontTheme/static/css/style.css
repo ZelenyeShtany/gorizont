@@ -60,6 +60,7 @@
 {
     filter: none;
 }
+
 /* HEADER */
 
 .header {
@@ -73,8 +74,12 @@
 }
 
 .logo {
-    min-width: 200px;
     display: inline-block;
+}
+
+.logo img {
+    max-width: 200px;
+
 }
 
 /* .header div { */
@@ -115,7 +120,7 @@
 .tooltip .tooltiptext {
     box-sizing: content-box;
     display: none;
-    min-width: 90px;
+    min-width: 130px;
     background-color: white;
     text-align: center;
     padding: 5px;
@@ -128,7 +133,11 @@
     z-index: 1;
 }
 
-.tooltiptext a {
+.tooltiptext a[href] {
+    color: #002561;
+    text-decoration: underline;
+    font-family: 'Arial';
+    line-height: 1.5;
     display: block;
 }
 
@@ -137,10 +146,10 @@
   display: inline-block;
 }
 
-.tooltip .tooltiptext {
-    top: 100%;
-    right: 1px;
-}
+.tooltip .tooltiptext {right: 1px;}
+.footer .tooltip .tooltiptext {bottom: 100%;}
+.header .tooltip .tooltiptext {top: 100%;}
+
 
 /* SOCIAL NETWORKS LINKS END */
 
@@ -277,7 +286,7 @@ body {
 
 /* О КОМПАНИИ */
 .benefits-list {
-    /* padding-left: 50px!important; */
+    padding-left: 15px!important;
 }
 
 .benefits-list li:first-child
@@ -302,7 +311,7 @@ body {
     display: block;
     margin: auto;
     margin-bottom: 15px;
-    width: 150px;
+    max-width: 150px;
     background-color: #389101;
     color: white;
 }
@@ -335,6 +344,7 @@ body {
 }
 
 .about > div > * {
+    margin-top: 15px;
     width: 550px;
 }
 
@@ -484,7 +494,7 @@ body {
 /* END Полный цикл работ */
 
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 860px) {
     .additional-descr
     {
 	display: none !important;
@@ -528,7 +538,7 @@ body {
 }
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 830px) {
     /* For mobile phones: */
     .telephone {
 	display: none;
@@ -537,6 +547,7 @@ body {
     .header {
 	display: block;
 	vertical-align: middle;
+	text-align: center;
     }
     
     .logo {
@@ -561,11 +572,12 @@ body {
 	font-size: 0.85em;
 	display: inline-block;
 	width: calc(100% - 110px);
+	min-width: 140px;
     }
 }
 
-@media only screen and (max-width: 420px) {
-    .footer div {
+@media only screen and (max-width: 440px) {
+    .footer > div {
 	display: block;
 	width: 100%;
 	padding: 5px 0 0 5px;
@@ -601,6 +613,8 @@ body {
 
 
 @media only screen and (max-width: 220px) {
+    
+    
     .slideshow-dark-text {
 	font-size: 1em!important;
     }
