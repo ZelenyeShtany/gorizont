@@ -279,8 +279,7 @@ body {
 
 /* О КОМПАНИИ */
 .benefits-list {
-    border: 1px solid black;
-    padding-left: 50px!important;
+    /* padding-left: 50px!important; */
 }
 
 .benefits-list li:first-child
@@ -326,6 +325,22 @@ body {
 
 
 /* НАШИ КЛИЕНТЫ END */
+
+/* ABOUT */
+
+
+.about > div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    
+}
+
+.about > div > * {
+    width: 550px;
+}
+
+/* ABOUT END */
 
 /* FOOTER */
 
