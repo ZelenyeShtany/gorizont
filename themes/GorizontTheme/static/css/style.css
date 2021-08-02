@@ -523,16 +523,16 @@ body {
 
     .header {
 	display: block;
-	text-align: center;
 	vertical-align: middle;
     }
     
     .logo {
+	text-align: center;
 	display: block;
     }
 
     .social {
-	width: 49%;
+	min-height: 100%;
     }
 
     .address:before {
@@ -547,8 +547,8 @@ body {
     .address {
 	border: 1px solid black;
 	font-size: 0.85em;
-	width: 49%;
 	display: inline-block;
+	width: calc(100% - 95px);
     }
 }
 
