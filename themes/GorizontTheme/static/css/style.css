@@ -239,6 +239,15 @@ body {
     float: right;
 }
 
+#naruzh {
+    background-position: 4% 23px;
+    background-size: 7.5% auto;
+}
+
+#naruzh h3
+{
+    padding-left: 12.5%;
+}
 
 .additional-info-block
 {
@@ -613,8 +622,7 @@ body {
 
 
 @media only screen and (max-width: 220px) {
-    
-    
+    .prev, .next { display: none!important; }
     .slideshow-dark-text {
 	font-size: 1em!important;
     }
