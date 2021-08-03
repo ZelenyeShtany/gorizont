@@ -603,6 +603,13 @@ body {
 	width: 100%;
 	padding: 5px 0 0 5px;
     }
+
+    .slideshow-dark-text {
+	font-size: 1.5em!important;
+    }
+    .slideshow-light-text {
+	font-size: 1em!important;
+    }
 }
 
 
@@ -629,12 +636,7 @@ body {
 	font-size: 1.5em;
 	padding-left: 25%;
     }
-    .slideshow-dark-text {
-	font-size: 1.5em!important;
-    }
-    .slideshow-light-text {
-	font-size: 1em!important;
-    }
+    
     .benefit {
 	width: 100%!important;
     }
