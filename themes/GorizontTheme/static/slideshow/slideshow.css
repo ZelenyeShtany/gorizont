@@ -70,6 +70,7 @@
 
 .slideshow-container img
 {
+    border: 1px solid black;
     max-width: 100%;
     max-height: 300px;
     transform: translate(0,-50%);
@@ -79,6 +80,7 @@
     margin: auto;
     /* border: 1px solid black; */
     display: inline-block;
+    vertical-align: middle;
     /* flex-shrink: ; */
 }
 
@@ -116,7 +118,7 @@
     position: absolute;
     left: 50%;
     margin: 0px;
-    bottom: 3%;
+    bottom: 10px;
     width: 100%;
 }
 
