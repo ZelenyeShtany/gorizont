@@ -508,6 +508,13 @@ body {
 
 
 @media only screen and (max-width: 860px) {
+    .mySlides {
+	flex-flow: column!important;
+    }
+    .slideshow-container img {
+	padding-top: 0px!important;
+	flex: 0 1 !important;
+    }
     #naruzh {
 	background-size: 60px auto;
 	background-position: 20px 23px;
@@ -537,21 +544,6 @@ body {
     /* 	padding-left: 100px; */
     /* } */
 
-    .mySlides {
-	display: flex!important;
-	flex-flow: column!important;
-    }
-
-    .text-container
-    {
-	flex: 0 1 auto!important;
-    }
-
-    .slideshow-container img
-    {
-	flex: 1 1 auto!important;
-    }
-    
     .slideshow-container
     {
 	/* position: static!important; */
@@ -602,8 +594,6 @@ body {
 	background: none;
     }
 
-    
-    
     .address {
 	font-size: 0.85em;
 	display: inline-block;
@@ -613,6 +603,9 @@ body {
 }
 
 @media only screen and (max-width: 440px) {
+    .mySlides {
+	height: 450px!important;
+    }
     .slideshow-container {
 	min-height: 500px!important;
     }
