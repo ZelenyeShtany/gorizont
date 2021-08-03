@@ -92,7 +92,7 @@
     background-size: 35px auto;
     background-repeat: no-repeat;
 }
-
+.telephone {width: 180px; }
 /* SOCIAL NETWORKS LINKS */
 
 .social {
@@ -111,7 +111,11 @@
 }
 
 /* Tooltip container */
+.tooltip:first {
+    padding-left: 0px;
+}
 .tooltip {
+    padding-left: 5px;
     position: relative;
     display: inline-block;
 }
@@ -592,7 +596,7 @@ body {
     .address {
 	font-size: 0.85em;
 	display: inline-block;
-	width: calc(100% - 110px);
+	width: calc(100% - 120px);
 	min-width: 140px;
     }
 }
