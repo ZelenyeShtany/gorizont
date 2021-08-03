@@ -602,6 +602,13 @@ body {
 }
 
 @media only screen and (max-width: 440px) {
+    .slideshow-container {
+	min-height: 500px!important;
+    }
+    .slideshow-container img {
+	max-height: 200px!important;
+    }
+    
     .footer > div {
 	display: block;
 	width: 100%;
@@ -629,7 +636,7 @@ body {
     .slideshow-container
     {
 	/* position: static!important; */
-	min-height: 490px!important;
+	min-height: 400px!important;
     }
 
     .additional-info-block {
