@@ -504,6 +504,18 @@ body {
 
 
 @media only screen and (max-width: 860px) {
+
+    
+    #naruzh {
+	background-size: 60px auto;
+	background-position: 20px 23px;
+    }
+    
+    #naruzh h3
+    {
+	padding-left: 100px;
+    }
+    
     .additional-descr
     {
 	display: none !important;
@@ -605,6 +617,14 @@ body {
 	background-position: 8% 23px;
 	background-size: 15% auto;
     }
+
+    #naruzh {
+	background-position: 8% 23px;
+	background-size: 15% auto;
+    }
+    
+    #naruzh h3 { padding-left: 25%; }
+    
     .additional-info-block h3 {
 	font-size: 1.5em;
 	padding-left: 25%;
