@@ -412,7 +412,8 @@ body {
 /* SERVICES PAGE */
 
 .service {
-    border-left: 20px solid white;
+    margin: 0px;
+    padding: 0px;
 }
 
 .service td p {
@@ -426,7 +427,6 @@ body {
 .service td:first-child p
 {
     display: inline-block;
-    background-color: #EAECEB;
     color: #3c3d41;
     padding: 10px 12px 10px 35px;
     border-radius: 30px;
@@ -603,6 +603,15 @@ body {
 }
 
 @media only screen and (max-width: 440px) {
+    .service td:first-child
+    {
+	display: block!important;
+	width: 100%!important;
+    }
+    .service td
+    {
+	display: block!important;
+    }
     .mySlides {
 	height: 450px!important;
     }
