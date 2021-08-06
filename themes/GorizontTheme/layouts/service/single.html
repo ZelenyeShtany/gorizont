@@ -50,7 +50,7 @@
 	     {{ $thumbnail := .Resize "120x" }}
  	     <figure style="display: inline-block" itemscope itemtype="http://schema.org/ImageObject" class="image">
  	     <a href="{{ .Permalink }}" itemprop="contentUrl" data-size="{{ .Width }}x{{ .Height }}" >
- 	     <img src="{{ $thumbnail.Permalink }}" itemprop="thumbnail" />
+ 	     <img src="{{ $thumbnail.RelPermalink }}" itemprop="thumbnail" />
  	     </a>
  	     </figure>
 	     
@@ -229,7 +229,7 @@
      {{ range $galleryimages }}
      [ {{ $thumbnail := .Resize "120x" }}
 	 "{{ .Name }}",
-       "{{ $thumbnail.Permalink }}",
+       "{{ $thumbnail.RelPermalink }}",
        "{{ .Width }}x{{ .Height }}"
      ],
      {{ end }}
@@ -240,7 +240,7 @@
      {{ range $galleryimages }}
      [ {{ $thumbnail := .Resize "120x" }}
 	 "{{ .Name }}",
-       "{{ $thumbnail.Permalink }}",
+       "{{ $thumbnail.RelPermalink }}",
        "{{ .Width }}x{{ .Height }}"
      ],
      {{ end }}
@@ -251,7 +251,7 @@
      {{ range $galleryimages }}
      [ {{ $thumbnail := .Resize "120x" }}
 	 "{{ .Name }}",
-       "{{ $thumbnail.Permalink }}",
+       "{{ $thumbnail.RelPermalink }}",
        "{{ .Width }}x{{ .Height }}"
      ],
      {{ end }}
@@ -262,7 +262,7 @@
      {{ range $galleryimages }}
      [ {{ $thumbnail := .Resize "120x" }}
 	 "{{ .Name }}",
-       "{{ $thumbnail.Permalink }}",
+       "{{ $thumbnail.RelPermalink }}",
        "{{ .Width }}x{{ .Height }}"
      ],
      {{ end }}
@@ -273,7 +273,7 @@
      {{ range $galleryimages }}
      [ {{ $thumbnail := .Resize "120x" }}
 	 "{{ .Name }}",
-       "{{ $thumbnail.Permalink }}",
+       "{{ $thumbnail.RelPermalink }}",
        "{{ .Width }}x{{ .Height }}"
      ],
      {{ end }}
@@ -284,7 +284,7 @@
      {{ range $galleryimages }}
      [ {{ $thumbnail := .Resize "120x" }}
 	 "{{ .Name }}",
-       "{{ $thumbnail.Permalink }}",
+       "{{ $thumbnail.RelPermalink }}",
        "{{ .Width }}x{{ .Height }}"
      ],
      {{ end }}
