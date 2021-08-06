@@ -411,20 +411,31 @@ body {
 
 /* SERVICES PAGE */
 
-.service {
+.my-gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.my-gallery figure {
+    margin: 5px;
+}
+
+.service-subjects-only,.service {
+    width: 70%;
     margin: 0px;
     padding: 0px;
 }
 
-.service td p {
+.service-subjects-only,.service td p {
     margin-bottom: 20px;
     color: #3c3d41;
     display: inline-block;
     vertical-align: middle;
 }
-.service td:first-child { width: 30%; }
+.service td:first-child, .service-subjects-only td { width: 30%; }
 
-.service td:first-child p
+.service td:first-child p,.service-subjects-only td p
 {
     display: inline-block;
     color: #3c3d41;
@@ -438,7 +449,11 @@ body {
     font-size: 16px;
 }
 
+
 .service-menu {
+    vertical-align: top;
+    display: inline-block;
+    width: 25%;
     border: 1px solid #d3d3d3;
     border-bottom: none;
     padding: 0px!important;
@@ -602,13 +617,19 @@ body {
     }
 }
 
+@media only screen and (max-width: 620px) {
+    .service-subjects-only,.service,.service-menu {
+	width: 100%!important;
+    }
+}
+
 @media only screen and (max-width: 440px) {
-    .service td:first-child
+    .service-subjects-only td,.service td:first-child
     {
 	display: block!important;
 	width: 100%!important;
     }
-    .service td
+    .service-subjects-only,.service td
     {
 	display: block!important;
     }
