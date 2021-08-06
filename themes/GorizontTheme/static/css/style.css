@@ -629,7 +629,8 @@ body {
 	display: block!important;
 	width: 100%!important;
     }
-    .service-subjects-only,.service td
+
+    .service td
     {
 	display: block!important;
     }
