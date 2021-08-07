@@ -582,7 +582,7 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 @media only screen and (max-width:830px) {
     .address:before,header .telephone {display: none}
 
-    .mySlides {height: 700px}
+    .mySlides {min-height: 700px}
     
     .logo,header {
         display: block;
@@ -615,7 +615,7 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 
     .service td,footer>div {display: block}
 
-    .mySlides {height: 450px}
+    .mySlides {min-height: 550px}
 
     .slideshow-container {
 	background-image: url(../slideshow/images/background440x346.png);
@@ -633,7 +633,7 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 
 @media only screen and (max-width:320px) {
     .slideshow-dark-text,.slideshow-light-text {font-size: 1em}
-    .mySlides {height: 370px}
+    .mySlides {min-height: 450px}
 
 
     #naruzh,.additional-info-block {
