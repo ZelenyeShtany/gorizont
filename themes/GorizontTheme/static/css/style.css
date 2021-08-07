@@ -620,7 +620,7 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 	background-image: url(../slideshow/images/background440x346.png);
     }
 
-    .slideshow-container img {max-height: 200px}
+    /* .slideshow-container img {max-height: 200px} */
 
     footer>div {
         width: 100%;
