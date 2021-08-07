@@ -603,6 +603,7 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 
 @media only screen and (max-width:620px) {
     .service,.service-menu,.service-subjects-only {width: 100%}
+    background-image: url(../slideshow/images/background620x346.png);
 }
 
 @media only screen and (max-width:440px) {
