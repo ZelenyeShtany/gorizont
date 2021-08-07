@@ -301,10 +301,20 @@ footer {
     margin: 20px auto auto
 }
 
+.telephone-footer {
+    /* text-align: center; */
+    width: auto;
+    max-width: 200px;
+}
+
+.telephone-footer p {
+font-family: 'Arial';
+}
 footer>* {width: 200px}
 
-footer>:last-child {
-    padding-bottom: 10px;
+footer .social {
+    
+    padding: 10px 0 10px 0;
     width: auto;
     max-width: 200px;
     text-align: center
@@ -568,7 +578,7 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 }
 
 @media only screen and (max-width:830px) {
-    .address:before,.telephone {display: none}
+    .address:before,header .telephone {display: none}
 
     .mySlides {height: 700px}
     
