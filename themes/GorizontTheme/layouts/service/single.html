@@ -256,6 +256,19 @@
      {{ end }}
  ];
 
+
+ {{ $galleryimages := .Page.Resources.Match "sport/*.jpg" }}
+ var sport = [
+     {{ range $galleryimages }}
+     [ {{ $thumbnail := .Resize "120x" }}
+	 "{{ .Name }}",
+       "{{ $thumbnail.RelPermalink }}",
+       "{{ .Width }}x{{ .Height }}"
+     ],
+     {{ end }}
+ ];
+
+ 
  {{ $galleryimages := .Page.Resources.Match "lazer/*.jpg" }}
  var lazer = [
      {{ range $galleryimages }}
@@ -570,22 +583,25 @@
      switch (n) {
 	 case 2:
 	     gallery_var_name = "lazer";
-	     console.log("srab");break;
+	     break;
 	 case 3:
 	     gallery_var_name = "suveniry";
-	     console.log("srab");break;
+	     break;
 	 case 4:
 	     gallery_var_name = "naruzh";
-	     console.log("srab");break;
+	     break;
 	 case 5:
 	     gallery_var_name = "brendir";
-	     console.log("srab");break;
+	     break;
+	 case 6:
+	     gallery_var_name = "sport";
+	     break;
 	 case 7:
 	     gallery_var_name = "shevrony";
-	     console.log("srab");break;
+	     break;
 	 case 8:
 	     gallery_var_name = "poligraph";
-	     console.log("srab");break;
+	     break;
 	     /* default:
 		gallery_var_name = "poligraph"; */
      }
