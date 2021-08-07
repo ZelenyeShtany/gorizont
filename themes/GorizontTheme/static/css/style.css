@@ -441,8 +441,9 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 
 .mySlides {
     align-items: center;
-    display: none;
+    justify-content: space-around;
     flex-wrap: wrap;
+    display: none;
     min-width: 100%;
     background-position: 85% 50%
 }
@@ -619,8 +620,6 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
     .slideshow-container {
 	background-image: url(../slideshow/images/background440x346.png);
     }
-
-    /* .slideshow-container img {max-height: 200px} */
 
     footer>div {
         width: 100%;
