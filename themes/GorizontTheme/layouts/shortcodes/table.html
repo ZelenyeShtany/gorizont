@@ -1,0 +1,17 @@
+{{ $htmlTable := .Inner | markdownify }}
+<!-- {{ $class := .Get 0 }} -->
+<!-- {{ $old := "<table>" }} -->
+<!-- {{ $new := printf "<table class=\"%s\">" $class }} -->
+<!-- {{ $htmlTable := replace $htmlTable $old $new }} -->
+{{ $htmlTable := replaceRE "<th>" "<td>" $htmlTable }}
+    {{ $htmlTable := replaceRE "</th>" "</td>" $htmlTable }}
+
+{{ $htmlTable := replaceRE "<td>" "<td><p>" $htmlTable }}
+    {{ $htmlTable := replaceRE "</td>" "</p></td>" $htmlTable }}
+{{ $htmlTable := replaceRE "</tbody>" "" $htmlTable }}
+{{ $htmlTable := replaceRE "<tbody>" "" $htmlTable }}
+    {{ $htmlTable := replaceRE "<thead>" "" $htmlTable }}
+    {{ $htmlTable := replaceRE "</thead>" "" $htmlTable }}
+    {{ $htmlTable := replaceRE "<td><p></p></td>" "" $htmlTable }}
+    
+    {{ $htmlTable | safeHTML }}

@@ -2,3 +2,5 @@ baseURL = "http://gorizont.onrender.com/"
 languageCode = "en-us"
 title = "Горизонт"
 theme = "GorizontTheme"
+[markup.goldmark.renderer]
+unsafe = true
