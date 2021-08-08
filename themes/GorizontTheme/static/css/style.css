@@ -350,7 +350,7 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
     width: 100%;
 }
 
-.service-subjects-only>p,.service>p {padding: 15px 0 15px 10px}
+.service-subjects-only>p,.service>p {padding: 15px 0 15px 10px; font-size: 18px; color: #7a7a7a}
 
 .service td,.service-subjects-only td {
     color: #3c3d41;
@@ -363,9 +363,9 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 
 
 .service td:first-child,.service-subjects-only td {
+    color: #7a7a7a;
     width: 50%;
     display: inline-block;
-    color: #3c3d41;
     padding: 10px 12px 10px 35px;
     border-radius: 30px;
     font-family: 'CORBEL BOLD';
@@ -394,7 +394,7 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 }
 
 .service-menu a {
-    font-family: "BEBAS NEUE CYRILLIC";
+    /* font-family: "BEBAS NEUE CYRILLIC"; */
     background-color: #fff;
     color: #7a7a7a;
     display: block;
@@ -402,7 +402,7 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
     text-decoration: none;
     margin: 0;
     border-bottom: 1px solid #d3d3d3;
-    font-size: 20px
+    font-size: 18px
 }
 
 .service-menu a.active,.service-menu a:hover {color: orange}
