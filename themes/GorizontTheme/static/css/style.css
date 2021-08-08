@@ -343,23 +343,26 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
     padding: 0
 }
 
-.service {margin: 0}
+.service {margin: 0;}
+
+.service-subjects-only table,.service table {
+    width: 100%;
+}
 
 .service-subjects-only>p,.service>p {padding: 15px 0 15px 10px}
 
-.service td p,.service-subjects-only {
+.service td,.service-subjects-only td {
     color: #3c3d41;
     display: inline-block;
-    vertical-align: middle
+    width: 50%;
+    vertical-align: middle;
 }
 
 .service-subjects-only {margin: 0 0 20px}
 
-.service td p {margin-bottom: 20px}
 
-.service td:first-child,.service-subjects-only td {width: 30%}
-
-.service td:first-child p,.service-subjects-only td p {
+.service td:first-child,.service-subjects-only td {
+    width: 50%;
     display: inline-block;
     color: #3c3d41;
     padding: 10px 12px 10px 35px;
@@ -371,6 +374,15 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
     background-repeat: no-repeat;
     font-size: 16px
 }
+
+.service td:first-child {
+    width: 30%;
+}
+
+.service td:nth-child(2) {
+    width: 70%;
+}
+
 
 .service-menu {
     vertical-align: top;
@@ -608,6 +620,13 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 }
 
 @media only screen and (max-width:440px) {
+
+    
+.service td:nth-child(2) {
+    width: 100%;
+}
+
+    
     .service td:first-child,.service-subjects-only td {
         display: block;
         width: 100%

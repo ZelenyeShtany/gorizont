@@ -1,0 +1,5 @@
+{{ $htmlTable := .Inner }}
+{{ $htmlTable := replaceRE "\n#+[ \t]+(.+)" "<table><tr><td>${1}</td><td>" $htmlTable 1 }}
+{{ $htmlTable := replaceRE "\n#+[ \t]+(.+)" "</td></tr><tr><td>${1}</td><td>" $htmlTable }}
+{{ $htmlTable := printf "%s </td></tr></table>" $htmlTable }}
+{{ $htmlTable | safeHTML }}
