@@ -528,7 +528,7 @@
 	     atmp.setAttribute("data-size",window[gallery_var_name][i][2]);
 
 	     let imgtmp = document.createElement('img');
-	     imgtmp.setAttribute("title",window[gallery_var_name][i][0]);
+	     imgtmp.setAttribute("title",window[gallery_var_name][i][0].split('/')[1]);
 	     imgtmp.setAttribute("src",window[gallery_var_name][i][1]);
 	     imgtmp.setAttribute("itemprop","thumbnail");
 
