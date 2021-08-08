@@ -338,7 +338,8 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 
 /* * services */
 
-.service,.service-subjects-only {
+.services {
+    display: inline-block;
     width: 70%;
     padding: 0
 }
@@ -414,7 +415,7 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 .cycle {
     background-color: #f0f0f0;
     padding: 20px;
-    text-align: center
+    text-align: center;
 }
 
 .cycle a {
@@ -422,6 +423,7 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
     display: inline-block;
     background-image: url();
     background-position: 50% 0;
+    background-size: 40px auto;
     font-size: 20px;
     padding-top: 55px;
     color: #3c3d41
@@ -615,7 +617,7 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 }
 
 @media only screen and (max-width:620px) {
-    .service,.service-menu,.service-subjects-only {width: 100%}
+    .services,.service-menu {width: 100%}
     .slideshow-container {background-image: url(../slideshow/images/background620x346.png)}
 }
 

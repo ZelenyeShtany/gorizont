@@ -21,11 +21,13 @@
 	<a onclick="choose_service(8)" href="javascript:void(0)">Оперативная полиграфия</a>
     </div>
 
+    <div class="services">
+    
     <div class="service">
 	{{ $shirokoform := .Page.Resources.GetMatch "shirokoform/*.md" }}
 	{{ $shirokoform.Content }}
     </div>
-
+    
     <div class="service-subjects-only">
 	{{ $lazer := .Page.Resources.GetMatch "lazer/*.md" }}
 	{{ $lazer.Content }}
@@ -59,7 +61,7 @@
 	{{ $poligraph := .Page.Resources.GetMatch "poligraph/*.md" }}
 	{{ $poligraph.Content }}
     </div>
-
+    
     <div class="cycle">
 	<h1 style="text-align: center">К вашим услугам полный цикл работ</h1>
 	<div class="w3-row-padding">
@@ -69,6 +71,8 @@
 	</div>
     </div>
 
+    </div>
+    
     <!-- Root element of PhotoSwipe. Must have class pswp. -->
     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
