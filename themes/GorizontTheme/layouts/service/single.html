@@ -481,6 +481,9 @@
      var gallery_var_name;
      console.log(n);
      switch (n) {
+	 case 1:
+	     gallery_var_name = "shirokoform";
+	     break;
 	 case 2:
 	     gallery_var_name = "lazer";
 	     break;
@@ -507,9 +510,9 @@
      }
      
      /* console.log("asdasd"); */
-     console.log(gallery_var_name);
-     console.log(window[gallery_var_name]);
-
+     /* console.log(gallery_var_name);
+      * console.log(window[gallery_var_name]);
+      */
      
      if (typeof window[gallery_var_name] !== 'undefined') {
 
@@ -525,6 +528,7 @@
 	     atmp.setAttribute("data-size",window[gallery_var_name][i][2]);
 
 	     let imgtmp = document.createElement('img');
+	     imgtmp.setAttribute("title",window[gallery_var_name][i][0]);
 	     imgtmp.setAttribute("src",window[gallery_var_name][i][1]);
 	     imgtmp.setAttribute("itemprop","thumbnail");
 
@@ -537,8 +541,8 @@
 	 services[n-1].appendChild(new_gallery_container);
 	 // execute above function
 	 initPhotoSwipeFromDOM('.my-gallery');
-	 window.history.pushState('', 'New Page Title', `?index=${n}`);
      }
+     window.history.pushState('', 'New Page Title', `?index=${n}`);
      
      
      
