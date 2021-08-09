@@ -11,7 +11,7 @@ function toggle_expand()
     }
     else
     {
-	logos[0].style.maxHeight = '85px';
+	logos[0].style.maxHeight = '95px';
 	document.getElementsByClassName("showmore")[0].innerHTML = "Показать еще";
 	clients_div_expanded = 0;
     }
