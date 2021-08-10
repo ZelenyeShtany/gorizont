@@ -144,9 +144,9 @@
  var brendir = [
      {{ range $galleryimages }}
      [ {{ $thumbnail := .Resize "120x" }}
-	 "{{ .Name }}",
-       "{{ $thumbnail.RelPermalink }}",
-       "{{ .Width }}x{{ .Height }}"
+	 '{{ .Name }}',
+       '{{ replaceRE "^/service" "./" $thumbnail.RelPermalink }}',
+       '{{ .Width }}x{{ .Height }}'
      ],
      {{ end }}
  ];
@@ -156,9 +156,9 @@
  var sport = [
      {{ range $galleryimages }}
      [ {{ $thumbnail := .Resize "120x" }}
-	 "{{ .Name }}",
-       "{{ $thumbnail.RelPermalink }}",
-       "{{ .Width }}x{{ .Height }}"
+	 '{{ .Name }}',
+       '{{ replaceRE "^/service" "./" $thumbnail.RelPermalink }}',
+       '{{ .Width }}x{{ .Height }}'
      ],
      {{ end }}
  ];
@@ -168,9 +168,9 @@
  var lazer = [
      {{ range $galleryimages }}
      [ {{ $thumbnail := .Resize "120x" }}
-	 "{{ .Name }}",
-       "{{ $thumbnail.RelPermalink }}",
-       "{{ .Width }}x{{ .Height }}"
+	 '{{ .Name }}',
+       '{{ replaceRE "^/service" "./" $thumbnail.RelPermalink }}',
+       '{{ .Width }}x{{ .Height }}'
      ],
      {{ end }}
  ];
@@ -179,9 +179,9 @@
  var naruzh = [
      {{ range $galleryimages }}
      [ {{ $thumbnail := .Resize "120x" }}
-	 "{{ .Name }}",
-       "{{ $thumbnail.RelPermalink }}",
-       "{{ .Width }}x{{ .Height }}"
+	 '{{ .Name }}',
+       '{{ replaceRE "^/service" "./" $thumbnail.RelPermalink }}',
+       '{{ .Width }}x{{ .Height }}'
      ],
      {{ end }}
  ];
@@ -190,9 +190,9 @@
  var poligraph = [
      {{ range $galleryimages }}
      [ {{ $thumbnail := .Resize "120x" }}
-	 "{{ .Name }}",
-       "{{ $thumbnail.RelPermalink }}",
-       "{{ .Width }}x{{ .Height }}"
+	 '{{ .Name }}',
+       '{{ replaceRE "^/service" "./" $thumbnail.RelPermalink }}',
+       '{{ .Width }}x{{ .Height }}'
      ],
      {{ end }}
  ];
@@ -201,9 +201,9 @@
  var shevrony = [
      {{ range $galleryimages }}
      [ {{ $thumbnail := .Resize "120x" }}
-	 "{{ .Name }}",
-       "{{ $thumbnail.RelPermalink }}",
-       "{{ .Width }}x{{ .Height }}"
+	 '{{ .Name }}',
+       '{{ replaceRE "^/service" "./" $thumbnail.RelPermalink }}',
+       '{{ .Width }}x{{ .Height }}'
      ],
      {{ end }}
  ];
@@ -212,9 +212,9 @@
  var suveniry = [
      {{ range $galleryimages }}
      [ {{ $thumbnail := .Resize "120x" }}
-	 "{{ .Name }}",
-       "{{ $thumbnail.RelPermalink }}",
-       "{{ .Width }}x{{ .Height }}"
+	 '{{ .Name }}',
+       '{{ replaceRE "^/service" "./" $thumbnail.RelPermalink }}',
+       '{{ .Width }}x{{ .Height }}'
      ],
      {{ end }}
  ];
