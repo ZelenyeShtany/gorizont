@@ -186,6 +186,9 @@ h1,li,p.lightgray { color: #545454}
 
 #naruzh h1 { padding-left: 12.5%}
 
+.additional-info-block:first-child {
+    background-image: url('../icons/additional-info/naruzhnaya-reklama.png')
+}
 .additional-info-block {
     position: relative;
     box-sizing: border-box;
