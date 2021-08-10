@@ -132,7 +132,7 @@ a,h3,p,ul {
     line-height: 1
 }
 
-.additional-info-block a { display: block}
+.additional-info-block h3 { font-size: 16px }
 
 h1,li,p.lightgray { color: #545454}
 
@@ -184,7 +184,7 @@ h1,li,p.lightgray { color: #545454}
     background-size: 7.5% auto
 }
 
-#naruzh h3 { padding-left: 12.5%}
+#naruzh h1 { padding-left: 12.5%}
 
 .additional-info-block {
     position: relative;
@@ -198,12 +198,13 @@ h1,li,p.lightgray { color: #545454}
     color: #fff
 }
 
-.additional-info-block h3 {
+.additional-info-block h1 {
     font-family: "BEBAS NEUE CYRILLIC";
     line-height: 1;
     margin-top: 23px;
     font-size: 2em;
     display: block;
+    color: #fff;
     padding-left: 25%
 }
 
@@ -569,7 +570,7 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
         background-position: 20px 23px
     }
 
-    #naruzh h3,.additional-info-block h3 {padding-left: 100px}
+    #naruzh h1,.additional-info-block h1 {padding-left: 100px}
 
     .additional-descr {display: none}
 
@@ -662,9 +663,9 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
         background-size: 15% auto
     }
 
-    #naruzh h3 {padding-left: 25%}
+    #naruzh h1 {padding-left: 25%}
 
-    .additional-info-block h3 {
+    .additional-info-block h1 {
         font-size: 1.5em;
         padding-left: 25%
     }
@@ -675,7 +676,7 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 @media only screen and (max-width:230px) {
     .next,.prev {display: none}
 
-    .additional-info-block h3 {font-size: 1em}
+    .additional-info-block h1 {font-size: 1em}
 
     .dot {
         height: 10px;
