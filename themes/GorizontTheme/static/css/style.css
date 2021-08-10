@@ -623,11 +623,11 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 }
 
 @media only screen and (max-width:440px) {
-
+    .additional-info-block br { display: none; }
     
-.service td:nth-child(2) {
-    width: 100%;
-}
+    .service td:nth-child(2) {
+	width: 100%;
+    }
 
     
     .service td:first-child,.service-subjects-only td {
@@ -637,7 +637,7 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 
     .service td,footer>div {display: block}
 
-    .mySlides {min-height: 550px}
+    .mySlides {min-height: 560px}
 
     .slideshow-container {
 	background-image: url(../slideshow/images/background440x346.png);
@@ -655,7 +655,7 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 
 @media only screen and (max-width:320px) {
     .slideshow-dark-text,.slideshow-light-text {font-size: 1em}
-    .mySlides {min-height: 450px}
+    .mySlides {min-height: 470px}
 
 
     #naruzh,.additional-info-block {
