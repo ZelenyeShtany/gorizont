@@ -1,9 +1,31 @@
-.w3-row-padding:after,.w3-row-padding:before
-{content:"";display:table;clear:both}
+.w3-twothird {
+    float: left;
+    width: 66.66666%
+}
 
-.w3-col,.w3-half,.w3-third,.w3-twothird,.w3-threequarter,.w3-quarter{float:left;width:100%}
-.w3-half{width:49.99999%}
-.w3-twothird{width:66.66666%}
+.w3-third {
+    float: left;
+    width: 33.33333%
+}
 
-.w3-half,.w3-third,.w3-twothird,.w3-threequarter,.w3-quarter{float:left;width:100%}
+@media (max-width:850px) {
+    .w3-twothird,.w3-third {width: 100%}
+}
 
+.w3-btn {
+    border: 0;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap
+}
+
+.w3-btn:hover {
+    box-shadow: 0 5px 3px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19)
+}
