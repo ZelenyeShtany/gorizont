@@ -7,5 +7,4 @@ resources
 static
 themes
 .gitignore
-.git-ftp-ignore
 config.toml
