@@ -1,2 +1,11 @@
-*
-!(public/*)
+.git
+archetypes
+content
+data
+layouts
+resources
+static
+themes
+.gitignore
+.git-ftp-ignore
+config.toml
