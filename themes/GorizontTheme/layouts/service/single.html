@@ -145,7 +145,7 @@
      {{ range $galleryimages }}
      [ {{ $thumbnail := .Resize "120x" }}
 	 '{{ .Name }}',
-       '{{ replaceRE "^/service" "./" $thumbnail.RelPermalink }}',
+       '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
        '{{ .Width }}x{{ .Height }}'
      ],
      {{ end }}
@@ -157,7 +157,7 @@
      {{ range $galleryimages }}
      [ {{ $thumbnail := .Resize "120x" }}
 	 '{{ .Name }}',
-       '{{ replaceRE "^/service" "./" $thumbnail.RelPermalink }}',
+       '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
        '{{ .Width }}x{{ .Height }}'
      ],
      {{ end }}
@@ -169,7 +169,7 @@
      {{ range $galleryimages }}
      [ {{ $thumbnail := .Resize "120x" }}
 	 '{{ .Name }}',
-       '{{ replaceRE "^/service" "./" $thumbnail.RelPermalink }}',
+       '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
        '{{ .Width }}x{{ .Height }}'
      ],
      {{ end }}
@@ -180,7 +180,7 @@
      {{ range $galleryimages }}
      [ {{ $thumbnail := .Resize "120x" }}
 	 '{{ .Name }}',
-       '{{ replaceRE "^/service" "./" $thumbnail.RelPermalink }}',
+       '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
        '{{ .Width }}x{{ .Height }}'
      ],
      {{ end }}
@@ -191,7 +191,7 @@
      {{ range $galleryimages }}
      [ {{ $thumbnail := .Resize "120x" }}
 	 '{{ .Name }}',
-       '{{ replaceRE "^/service" "./" $thumbnail.RelPermalink }}',
+       '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
        '{{ .Width }}x{{ .Height }}'
      ],
      {{ end }}
@@ -202,7 +202,7 @@
      {{ range $galleryimages }}
      [ {{ $thumbnail := .Resize "120x" }}
 	 '{{ .Name }}',
-       '{{ replaceRE "^/service" "./" $thumbnail.RelPermalink }}',
+       '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
        '{{ .Width }}x{{ .Height }}'
      ],
      {{ end }}
@@ -213,7 +213,7 @@
      {{ range $galleryimages }}
      [ {{ $thumbnail := .Resize "120x" }}
 	 '{{ .Name }}',
-       '{{ replaceRE "^/service" "./" $thumbnail.RelPermalink }}',
+       '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
        '{{ .Width }}x{{ .Height }}'
      ],
      {{ end }}
