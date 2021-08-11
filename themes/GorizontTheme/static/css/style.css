@@ -180,15 +180,12 @@ h1,li,p.lightgray { color: #545454}
 /* * additional info block */
 
 #naruzh {
-    background-position: 4% 23px;
+    background-position: 3.5% 23px;
     background-size: 7.5% auto
 }
 
 #naruzh h1 { padding-left: 12.5%}
 
-.additional-info-block:first-child {
-    background-image: url('../icons/additional-info/naruzhnaya-reklama.png')
-}
 .additional-info-block {
     position: relative;
     box-sizing: border-box;
@@ -423,6 +420,7 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 }
 
 .cycle a {
+    margin-top: 25px;
     font-family: "CORBEL BOLD";
     display: inline-block;
     background-image: url();
