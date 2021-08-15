@@ -686,13 +686,11 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
     .slideshow-container {background-image: url(../slideshow/images/background620x346.png)}
 }
 
+
 @media only screen and (max-width:440px) {
     .slideshow-container .slideshow-dark-text .maybe-hidden { display: none; }
     
-    .service td:nth-child(2) {
-	width: 100%;
-    }
-
+    .service td:nth-child(2) { width: 100% }
     
     .service td:first-child,.service-subjects-only td {
         display: block;
@@ -712,10 +710,11 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
         padding: 5px 0 0 5px
     }
 
-    .slideshow-dark-text {font-size: 1.6em}
+    .slideshow-dark-text {font-size: 2em}
 
     .slideshow-light-text {font-size: 1em}
 }
+
 
 @media only screen and (max-width:320px) {
     .slideshow-dark-text,.slideshow-light-text {font-size: 1em}
@@ -736,6 +735,16 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 
     .benefit {width: 100%}
 }
+
+
+@media only screen and (max-height: 610px) {
+    .slideshow-dark-text {font-size: 1.5em}
+    .mySlides {min-height: 450px}
+    .slideshow-container img {
+	max-height: 200px;
+    }
+}
+
 
 @media only screen and (max-width:230px) {
     .next,.prev {display: none}
