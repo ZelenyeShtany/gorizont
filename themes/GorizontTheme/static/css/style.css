@@ -540,6 +540,9 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 }
 
 .slideshow-container img {
+    top: 0px;
+    position: absolute;
+    right: 20px;
     max-height: 350px;
     max-width: 100%;
     margin: auto;
@@ -547,9 +550,13 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
     padding-top: 50px;
 }
 
+
 .text-container {
+    top: 0px;
+    position: absolute;
+    left: 0px;
     padding: 8% 3% 0 8%;
-    flex: 0 1 auto;
+    /* flex: 0 1 auto; */
     display: inline-block;
     text-align: left
 }
@@ -737,7 +744,7 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 }
 
 
-@media only screen and (max-height: 610px) {
+@media only screen and (max-height: 610px) and (max-width: 360px) {
     .slideshow-dark-text {font-size: 1.5em}
     .mySlides {min-height: 450px}
     .slideshow-container img {
