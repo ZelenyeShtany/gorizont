@@ -32,4 +32,4 @@ function showSlides(n) {
 }
 
 // automatically show next slide every 2 seconds
-// var interval = setInterval(function(){ showSlides(++slideIndex) }, 3000);
+var interval = setInterval(function(){ showSlides(++slideIndex) }, 3000);
