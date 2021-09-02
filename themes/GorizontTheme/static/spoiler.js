@@ -1,10 +1,33 @@
 var clients_div_expanded = 0;
 
+var hidden_logos = [
+    ["Компания Freshsu","Компания Freshsu","/ourclients/freshsu.png","width: 145px"],
+    ["Студия танцев «Горец»","Студия танцев «Горец»","/ourclients/gorec.png"],
+    ["Областная федерация каратэ шинкиокушинкай","Областная федерация каратэ шинкиокушинкай","/ourclients/karate.png"],
+    ["ОО «Алматинский областной Русский культурный центр»","ОО «Алматинский областной Русский культурный центр»","/ourclients/kcrk.png"],
+    ["КГУ «Специализированная детско-юношеская спортивная школа по национальным и конным видам спорта города Талдыкорган»","КГУ «Специализированная детско-юношеская спортивная школа по национальным и конным видам спорта города Талдыкорган»","/ourclients/sportshkola.png"],
+    ["Казахстанский котельный завод","Казахстанский котельный завод","/ourclients/teplo-standart.png"],
+    ["Футбольный клуб «Жетысу»","Футбольный клуб «Жетысу»","/ourclients/zhetysu2.png"],
+    ["Футбольная команда «Жетысу Чемпионс»","Футбольная команда «Жетысу Чемпионс»","/ourclients/zhetysu.png"]
+];
+var logos_were_expanded_at_least_once=0;
 function toggle_expand()
 {
     var logos = document.getElementsByClassName('clients-logos');
     if (clients_div_expanded == 0)
     {
+	if (logos_were_expanded_at_least_once == 0) {
+	 for (let i = 0; i < hidden_logos.length; i++) {
+	     let imgtmp = document.createElement('img');
+	     imgtmp.setAttribute("title",hidden_logos[i][0]);
+	     imgtmp.setAttribute("alt",hidden_logos[i][1]);
+	     imgtmp.setAttribute("src",hidden_logos[i][2]);
+	     if (hidden_logos[i].length == 4)
+		 imgtmp.setAttribute("style",hidden_logos[i][3]);
+	     logos[0].appendChild(imgtmp);
+	 }
+	    logos_were_expanded_at_least_once = 1;
+     }
 	logos[0].style.maxHeight = '3000px';
 	document.getElementsByClassName("showmore")[0].innerHTML = "Скрыть";
 	clients_div_expanded = 1;
