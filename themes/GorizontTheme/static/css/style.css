@@ -169,14 +169,17 @@ a,h3,p,ul {
 h1,li,p.lightgray { color: #545454}
 
 @font-face {
+    font-display: swap;
     font-family:"BEBAS NEUE CYRILLIC";src:url(../fonts/BEBAS-NEUE-CYRILLIC.TTF) format("truetype")
 }
 
 @font-face {
+    font-display: swap;
     font-family:"CORBEL";src:url(../fonts/CORBEL.TTF) format("truetype")
 }
 
 @font-face {
+    font-display: swap;
     font-family:"CORBEL BOLD";src:url(../fonts/CORBELB.TTF) format("truetype")
 }
 
