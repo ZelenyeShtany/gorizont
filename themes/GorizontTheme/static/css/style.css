@@ -490,12 +490,10 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 
 /* * slideshow */
 
-.no-webp .slideshow-container { background: url(../slideshow/images/background.png) no-repeat; }
-.no-js .slideshow-container { background: url(../slideshow/images/background.png) no-repeat; }
+.webp .slideshow-container {background-image: url(../slideshow/images/background.webp); background-repeat: no-repeat;}
+.no-webp .slideshow-container { background-image: url(../slideshow/images/background.png); background-repeat: no-repeat; }
+.no-js .slideshow-container { background-image: url(../slideshow/images/background.png); background-repeat: no-repeat; }
 
-.webp .slideshow-container {
-    background: url(../slideshow/images/background.webp) no-repeat;
-}
 .slideshow-container {
     background-size: auto 100%;
     position: relative;
@@ -698,10 +696,9 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 
 @media only screen and (max-width:620px) {
     .services,.service-menu {width: 100%}
-    .slideshow-container .no-webp {background-image: url(../slideshow/images/background620x346.png)}
-    .slideshow-container .no-js {background-image: url(../slideshow/images/background620x346.png)}
-
-    .slideshow-container .webp {background-image: url(../slideshow/images/background620x346.webp)}
+    .webp .slideshow-container {background-image: url(../slideshow/images/background620x346.webp)}
+    .no-webp .slideshow-container {background-image: url(../slideshow/images/background620x346.png)}
+    .no-js .slideshow-container {background-image: url(../slideshow/images/background620x346.png)}
 }
 
 
@@ -719,9 +716,9 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 
     .mySlides {min-height: 560px}
 
-    .slideshow-container .no-webp {background-image: url(../slideshow/images/background440x346.png);}
-    .slideshow-container .no-js {background-image: url(../slideshow/images/background440x346.png);}
-    .slideshow-container .webp {background-image: url(../slideshow/images/background440x346.webp);}
+    .no-webp .slideshow-container {background-image: url(../slideshow/images/background440x346.png);}
+    .no-js .slideshow-container {background-image: url(../slideshow/images/background440x346.png);}
+    .webp .slideshow-container {background-image: url(../slideshow/images/background440x346.webp);}
 
     footer>div {
         width: 100%;
