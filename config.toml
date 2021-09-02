@@ -5,3 +5,4 @@ theme = "GorizontTheme"
 relativeURLs = true
 [markup.goldmark.renderer]
 unsafe = true
+disableKinds = sitemap
