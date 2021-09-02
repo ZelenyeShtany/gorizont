@@ -1,14 +1,14 @@
 var clients_div_expanded = 0;
 
 var hidden_logos = [
-    ["Компания Freshsu","Компания Freshsu","/ourclients/freshsu.png","width: 145px"],
-    ["Студия танцев «Горец»","Студия танцев «Горец»","/ourclients/gorec.png"],
-    ["Областная федерация каратэ шинкиокушинкай","Областная федерация каратэ шинкиокушинкай","/ourclients/karate.png"],
-    ["ОО «Алматинский областной Русский культурный центр»","ОО «Алматинский областной Русский культурный центр»","/ourclients/kcrk.png"],
-    ["КГУ «Специализированная детско-юношеская спортивная школа по национальным и конным видам спорта города Талдыкорган»","КГУ «Специализированная детско-юношеская спортивная школа по национальным и конным видам спорта города Талдыкорган»","/ourclients/sportshkola.png"],
-    ["Казахстанский котельный завод","Казахстанский котельный завод","/ourclients/teplo-standart.png"],
-    ["Футбольный клуб «Жетысу»","Футбольный клуб «Жетысу»","/ourclients/zhetysu2.png"],
-    ["Футбольная команда «Жетысу Чемпионс»","Футбольная команда «Жетысу Чемпионс»","/ourclients/zhetysu.png"]
+    ["Компания Freshsu","Компания Freshsu","/ourclients/freshsu","width: 145px"],
+    ["Студия танцев «Горец»","Студия танцев «Горец»","/ourclients/gorec"],
+    ["Областная федерация каратэ шинкиокушинкай","Областная федерация каратэ шинкиокушинкай","/ourclients/karate"],
+    ["ОО «Алматинский областной Русский культурный центр»","ОО «Алматинский областной Русский культурный центр»","/ourclients/kcrk"],
+    ["КГУ «Специализированная детско-юношеская спортивная школа по национальным и конным видам спорта города Талдыкорган»","КГУ «Специализированная детско-юношеская спортивная школа по национальным и конным видам спорта города Талдыкорган»","/ourclients/sportshkola"],
+    ["Казахстанский котельный завод","Казахстанский котельный завод","/ourclients/teplo-standart"],
+    ["Футбольный клуб «Жетысу»","Футбольный клуб «Жетысу»","/ourclients/zhetysu2"],
+    ["Футбольная команда «Жетысу Чемпионс»","Футбольная команда «Жетысу Чемпионс»","/ourclients/zhetysu"]
 ];
 var logos_were_expanded_at_least_once=0;
 function toggle_expand()
@@ -18,13 +18,22 @@ function toggle_expand()
     {
 	if (logos_were_expanded_at_least_once == 0) {
 	 for (let i = 0; i < hidden_logos.length; i++) {
-	     let imgtmp = document.createElement('img');
-	     imgtmp.setAttribute("title",hidden_logos[i][0]);
-	     imgtmp.setAttribute("alt",hidden_logos[i][1]);
-	     imgtmp.setAttribute("src",hidden_logos[i][2]);
+	     let img = document.createElement('img');
+	     img.setAttribute("title",hidden_logos[i][0]);
+	     img.setAttribute("alt",hidden_logos[i][1]);
+	     img.setAttribute("src",hidden_logos[i][2]+".png");
 	     if (hidden_logos[i].length == 4)
-		 imgtmp.setAttribute("style",hidden_logos[i][3]);
-	     logos[0].appendChild(imgtmp);
+		 img.setAttribute("style",hidden_logos[i][3]);
+
+	     let source = document.createElement('source');
+	     source.setAttribute("type","image/avif");
+	     source.setAttribute("srcset",hidden_logos[i][2]+".avif");
+
+	     let picture = document.createElement('picture');
+	     picture.appendChild(source);
+	     picture.appendChild(img);
+	     
+	     logos[0].appendChild(picture);
 	 }
 	    logos_were_expanded_at_least_once = 1;
      }
