@@ -1,4 +1,5 @@
 {{ define "main" }}
+<script> document.documentElement.classList.remove("no-js"); </script>
 <!-- <h1 class="title">{{ .Site.Title }}</h1> -->
 <!-- <a> -->
 <!--   {{ .Content }} -->
@@ -16,7 +17,7 @@
 	    <p class="slideshow-light-text">Медали, статуэтки, вымпелы<br>Сувениры, подарки, награды<br>Лазерная резка<br>Гравировка</p>
 	</div>
 	<picture>
-	    <source type="image/avif" srcset="/slideshow/images/ciferblat.avif"/>
+	    <source type="image/webp" srcset="/slideshow/images/ciferblat.webp"/>
 	    <img src="/slideshow/images/ciferblat.png"/>
 	</picture>
     </div>
@@ -27,7 +28,7 @@
 	    <p class="slideshow-light-text">Изготовление стендов, табличек, баннеров<br>Печать на оракале, виниле, фотобумаге<br>Распечатка чертежей, схем</p>
 	</div>
 	<picture>
-	    <source type="image/avif" srcset="/slideshow/images/naruzh.avif"/>
+	    <source type="image/webp" srcset="/slideshow/images/naruzh.webp"/>
 	    <img src="/slideshow/images/naruzh.png"/>
 	</picture>
     </div>
@@ -38,7 +39,7 @@
 	    <p class="slideshow-light-text">Оперативная полиграфия<br>Открытки, визитки, грамоты,<br>дипломы, поздравительные</p>
 	</div>
 	<picture>
-	    <source type="image/avif" srcset="/slideshow/images/poligraph.avif"/>
+	    <source type="image/webp" srcset="/slideshow/images/poligraph.webp"/>
 	    <img src="/slideshow/images/poligraph.png"/>
 	</picture>
     </div>
@@ -49,7 +50,7 @@
 	    <p class="slideshow-light-text">Повышайте узнаваевость вашего бизнеса<br>Стойкие, яркие принты<br>Проверенные технологии печати</p>
 	</div>
 	<picture>
-	    <source type="image/avif" srcset="/slideshow/images/futbolki.avif"/>
+	    <source type="image/webp" srcset="/slideshow/images/futbolki.webp"/>
 	    <img src="/slideshow/images/futbolki.png"/>
 	</picture>
     </div>
@@ -173,39 +174,39 @@
     <a onclick="toggle_expand()" class="w3-btn showmore">Показать еще</a>
     <div class="clients-logos">
 	<picture>
-	    <source type="image/avif" srcset="/ourclients/obl.avif">
+	    <source type="image/webp" srcset="/ourclients/obl.webp">
 	    <img title="Акимат Алматинской области" alt="Акимат Алматинской области" src="/ourclients/obl.png"/>
 	</picture>
 	<picture>
-	    <source type="image/avif" srcset="/ourclients/taldykorgan.avif">
+	    <source type="image/webp" srcset="/ourclients/taldykorgan.webp">
 	    <img title="Акимат города Талдыкорган" alt="Акимат города Талдыкорган" src="/ourclients/taldykorgan.png"/>
 	</picture>
 	<picture>
-	    <source type="image/avif" srcset="/ourclients/oblsport.avif">
+	    <source type="image/webp" srcset="/ourclients/oblsport.webp">
 	    <img title="Управление физкультуры и спорта Алматинской области" alt="Управление физкультуры и спорта Алматинской области" src="/ourclients/oblsport.png"/>
 	</picture>
 	<picture>
-	    <source type="image/avif" srcset="/ourclients/halyk.avif">
+	    <source type="image/webp" srcset="/ourclients/halyk.webp">
 	    <img title="Народный Банк Казахстана" alt="Народный Банк Казахстана" style="width: 145px" src="/ourclients/halyk.png"/>
 	</picture>
 	<picture>
-	    <source type="image/avif" srcset="/ourclients/mchs.avif">
+	    <source type="image/webp" srcset="/ourclients/mchs.webp">
 	    <img title="Департамент по ЧС Алматинской области" alt="Департамент по ЧС Алматинской области" src="/ourclients/mchs.png"/>
 	</picture>
 	<picture>
-	    <source type="image/avif" srcset="/ourclients/center-krovi.avif">
+	    <source type="image/webp" srcset="/ourclients/center-krovi.webp">
 	    <img title="Областной центр крови" alt="Областной центр крови" src="/ourclients/center-krovi.png"/>
 	</picture>
 	<picture>
-	    <source type="image/avif" srcset="/ourclients/3-kita.avif">
+	    <source type="image/webp" srcset="/ourclients/3-kita.webp">
 	    <img title="Магазин сантехники «Три Кита»" alt="Магазин сантехники «Три Кита»" src="/ourclients/3-kita.png"/>
 	</picture>
 	<picture>
-	    <source type="image/avif" srcset="/ourclients/azhar.avif">
+	    <source type="image/webp" srcset="/ourclients/azhar.webp">
 	    <img title="ТОО «ТФ Ажар» Швейная фабрика" alt="ТОО «ТФ Ажар» Швейная фабрика" src="/ourclients/azhar.png"/>
 	</picture>
 	<picture>
-	    <source type="image/avif" srcset="/ourclients/colledzh.avif">
+	    <source type="image/webp" srcset="/ourclients/colledzh.webp">
 	    <img title="Талдыкорганский гуманитарно-технологический колледж" alt="Талдыкорганский гуманитарно-технологический колледж" src="/ourclients/colledzh.png"/>
 	</picture>
     </div>
@@ -235,7 +236,6 @@
 	</ul>
     </div>
 </div>
-
 <script src="/slideshow/slideshow.js"></script>
 <script src="/spoiler.js"></script>
 {{ end }}
