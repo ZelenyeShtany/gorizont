@@ -202,13 +202,13 @@ h1,li,p.lightgray { color: #545454}
 }
 
 .moreinfo:before {
-    font-size: 14px;
+    font-size: 10px;
     content: "\276F";
     border-radius: 50%;
     background-color: orange;
     display: block;
     margin: 0 0 0 5px;
-    padding: 2px 0 0 5px;
+    padding: 4px 0 0 7px;
     /* background: url(../icons/arrow-right.png) no-repeat; */
     background-position: 30% 100%;
     /* background-size: 20px 20px; */
