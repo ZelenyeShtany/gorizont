@@ -202,16 +202,36 @@ h1,li,p.lightgray { color: #545454}
 }
 
 .moreinfo:before {
-    content: "";
+    font-size: 14px;
+    content: "\276F";
+    border-radius: 50%;
+    background-color: orange;
     display: block;
-    background: url(../icons/arrow-right.png) no-repeat;
-    background-position: 80% 50%;
-    background-size: 20px 20px;
-    width: 30px;
+    margin: 0 0 0 5px;
+    padding: 2px 0 0 5px;
+    /* background: url(../icons/arrow-right.png) no-repeat; */
+    background-position: 30% 100%;
+    /* background-size: 20px 20px; */
+    width: 20px;
     height: 20px;
     float: right
 }
 
+.webp .garantiya { background-image: url('../icons/benefits/garantiya.webp');}
+.no-webp .garantiya { background-image: url('../icons/benefits/garantiya.png');}
+.no-js .garantiya { background-image: url('../icons/benefits/garantiya.png');}
+
+.webp .ceny { background-image: url('../icons/benefits/ceny.webp');}
+.no-webp .ceny { background-image: url('../icons/benefits/ceny.png');}
+.no-js .ceny { background-image: url('../icons/benefits/ceny.png');}
+
+.webp .fifteenyears { background-image: url('../icons/benefits/fifteenyears.webp');}
+.no-webp .fifteenyears { background-image: url('../icons/benefits/fifteenyears.png');}
+.no-js .fifteenyears { background-image: url('../icons/benefits/fifteenyears.png');}
+
+.webp .oplata { background-image: url('../icons/benefits/oplata.webp');}
+.no-webp .oplata { background-image: url('../icons/benefits/oplata.png');}
+.no-js .oplata { background-image: url('../icons/benefits/oplata.png');}
 /* * additional info block */
 
 #naruzh {
@@ -264,7 +284,37 @@ h1,li,p.lightgray { color: #545454}
     margin-bottom: 3px
 }
 
-/* * our clients */
+.webp .lazer { border-left: none; background-image: url('../icons/additional-info/lazernaya-rezka.webp'); }
+.no-webp .lazer { border-left: none; background-image: url('../icons/additional-info/lazernaya-rezka.png'); }
+.no-js .lazer { border-left: none; background-image: url('../icons/additional-info/lazernaya-rezka.png'); }
+
+.webp .suveniry { background-image: url('../icons/additional-info/suveniry.webp')}
+.no-webp .suveniry { background-image: url('../icons/additional-info/suveniry.png')}
+.no-js .suveniry { background-image: url('../icons/additional-info/suveniry.png')}
+
+.webp .shirokoform { border-right: none; background-image: url('../icons/additional-info/shirokoformatnaya.webp') }
+.no-webp .shirokoform { border-right: none; background-image: url('../icons/additional-info/shirokoformatnaya.png') }
+.no-js .shirokoform { border-right: none; background-image: url('../icons/additional-info/shirokoformatnaya.png') }
+
+
+.webp .brendir { border-left: none; background-image: url('../icons/additional-info/brendirovanie.webp') }
+.no-webp .brendir { border-left: none; background-image: url('../icons/additional-info/brendirovanie.png') }
+.no-js .brendir { border-left: none; background-image: url('../icons/additional-info/brendirovanie.png') }
+
+
+.webp .shevrony { background-image: url('../icons/additional-info/shevrony.webp') }
+.no-webp .shevrony { background-image: url('../icons/additional-info/shevrony.png') }
+.no-js .shevrony { background-image: url('../icons/additional-info/shevrony.png') }
+
+
+.webp .poligrafiya { border-right: none; background-image: url('../icons/additional-info/poligrafiya.webp') }
+.no-webp .poligrafiya { border-right: none; background-image: url('../icons/additional-info/poligrafiya.png') }
+.no-js .poligrafiya { border-right: none; background-image: url('../icons/additional-info/poligrafiya.png') }
+
+
+.webp .naruzh { border-right: none;background-image: url('../icons/additional-info/naruzhnaya-reklama.webp') }
+.no-webp .naruzh { border-right: none;background-image: url('../icons/additional-info/naruzhnaya-reklama.png') }
+.no-js .naruzh { border-right: none;background-image: url('../icons/additional-info/naruzhnaya-reklama.png') }/* * our clients */
 
 .clients-logos {
     display: flex;
