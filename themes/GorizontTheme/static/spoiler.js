@@ -26,8 +26,8 @@ function toggle_expand()
 		 img.setAttribute("style",hidden_logos[i][3]);
 
 	     let source = document.createElement('source');
-	     source.setAttribute("type","image/avif");
-	     source.setAttribute("srcset",hidden_logos[i][2]+".avif");
+	     source.setAttribute("type","image/webp");
+	     source.setAttribute("srcset",hidden_logos[i][2]+".webp");
 
 	     let picture = document.createElement('picture');
 	     picture.appendChild(source);
@@ -48,6 +48,9 @@ function toggle_expand()
 	clients_div_expanded = 0;
     }
 }
+
+document.getElementsByClassName("showmore")[0].style.display = "block";
+
 
 
 /// CSS-TRICKS https://css-tricks.com/using-css-transitions-auto-dimensions/

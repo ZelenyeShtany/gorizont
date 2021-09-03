@@ -365,7 +365,7 @@ h1,li,p.lightgray { color: #545454}
     text-align: center;
     cursor: pointer;
     white-space: nowrap;
-    display: block;
+    display: none;
     margin: auto auto 15px;
     max-width: 150px;
     background-color: #389101;
@@ -565,6 +565,7 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 }
 
 .next,.prev {
+    display: none;
     text-align: center;
     vertical-align: middle;
     transform: translate(0,50%);
@@ -583,6 +584,11 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
     justify-content: center;
     align-items: center
 }
+
+.no-js .next { display: inline-block; }
+.no-js .prev { display: inline-block; }
+
+
 
 .next a,.prev a {transform: translate(0,12%)}
 
@@ -630,6 +636,7 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 }
 
 .dot-container {
+    display: none;
     position: absolute;
     bottom: 10px;
     text-align: center;

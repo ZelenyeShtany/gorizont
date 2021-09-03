@@ -33,3 +33,8 @@ function showSlides(n) {
 
 // automatically show next slide every 2 seconds
 var interval = setInterval(function(){ showSlides(++slideIndex) }, 3000);
+
+
+document.getElementsByClassName("dot-container")[0].style.display = "block";
+document.getElementsByClassName("prev")[0].style.display = "inline-flex";
+document.getElementsByClassName("next")[0].style.display = "inline-flex";
