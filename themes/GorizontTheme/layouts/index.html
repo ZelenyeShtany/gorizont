@@ -6,11 +6,12 @@
 
 <!-- SLIDESHOW -->
 <!-- Slideshow container -->
+
 <div class="slideshow-container">
 
     <!-- Full-width images with number and caption text -->
     
-    <div style="display: block;" class="mySlides fade">
+    <div class="mySlides fade">
 	<div class="text-container">
 	    <p class="slideshow-dark-text">Изготовление сувенирной,<br>наградной&nbsp;<br class="maybe-hidden">и бизнес-продукции&nbsp;<br class="maybe-hidden">на заказ</p>
 	    <p class="slideshow-light-text">Медали, статуэтки, вымпелы<br>Сувениры, подарки, награды<br>Лазерная резка<br>Гравировка</p>
@@ -57,16 +58,16 @@
     <!-- Next and previous buttons -->
     
     <div class="dot-container">
-	<div class="prev" onclick="plusSlides(-1)"><a>&#10094;</a></div>
+	<div class="nojs-prev" onclick="plusSlides(-1)"><a>&#10094;</a></div>
 	<span class="dot" onclick="currentSlide(1)"></span>
 	<span class="dot" onclick="currentSlide(2)"></span>
 	<span class="dot" onclick="currentSlide(3)"></span>
 	<span class="dot" onclick="currentSlide(4)"></span>
-	<div class="next" onclick="plusSlides(1)"><a>&#10095;</a></div>
+	<div class="nojs-next" onclick="plusSlides(1)"><a>&#10095;</a></div>
     </div>
     
 </div>
-
+<script>document.getElementsByClassName('slideshow-container')[0].style.display='block';</script>
 {{ if .IsHome }}
 <script src="/flickity.pkgd.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/flickity.css">

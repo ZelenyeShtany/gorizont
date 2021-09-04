@@ -111,7 +111,7 @@ https://flickity.metafizzy.co
 .flickity-page-dots {
   position: absolute;
   width: 100%;
-  bottom: -25px;
+  bottom: 20px;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -122,16 +122,18 @@ https://flickity.metafizzy.co
 .flickity-rtl .flickity-page-dots { direction: rtl; }
 
 .flickity-page-dots .dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 8px;
-  background: #333;
-  border-radius: 50%;
-  opacity: 0.25;
-  cursor: pointer;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin: 0 8px;
+    background: #333;
+    border-radius: 50%;
+    opacity: 0.25;
+    cursor: pointer;
+    border: 1px solid white;
 }
 
 .flickity-page-dots .dot.is-selected {
-  opacity: 1;
+    opacity: 1;
+    background: white;
 }

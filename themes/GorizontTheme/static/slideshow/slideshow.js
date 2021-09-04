@@ -40,6 +40,5 @@
 // document.getElementsByClassName("next")[0].style.display = "inline-flex";
 
 var flkty = new Flickity('.slideshow-container',
-    { cellSelector: '.mySlides',
-      autoPlay: 2000
+    { cellSelector: '.mySlides'
     });

@@ -545,6 +545,7 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 .no-js .slideshow-container { background-image: url(../slideshow/images/background.png); background-repeat: no-repeat; }
 
 .slideshow-container {
+    display: none;
     background-size: auto 100%;
     margin: auto;
     height: auto;
@@ -555,14 +556,13 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 .cycle a,.mySlides {background-repeat: no-repeat}
 
 .mySlides {
+    position: relative;
     align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
     min-width: 100%;
     background-position: 85% 50%
 }
 
-.next,.prev {
+.nojs-next,.nojs-prev {
     display: none;
     text-align: center;
     vertical-align: middle;
@@ -583,36 +583,33 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
     align-items: center
 }
 
-.no-js .next { display: inline-block; }
-.no-js .prev { display: inline-block; }
+.no-js .nojs-next { display: inline-block; }
+.no-js .nojs-prev { display: inline-block; }
 
 
 
-.next a,.prev a {transform: translate(0,12%)}
+.nojs-next a,.nojs-prev a {transform: translate(0,12%)}
 
-.next {right: 80px}
+.nojs-next {right: 80px}
 
-.prev {left: 80px}
+.nojs-prev {left: 80px}
 
-.next:hover,.prev:hover {
+.nojs-next:hover,.nojs-prev:hover {
     background-color: #ebebeb;
     color: green
 }
 
 .slideshow-container img {
-    top: 0px;
+    position: absolute;
+    top: 50px;
     right: 20px;
     max-height: 350px;
     max-width: 100%;
     margin: auto;
     display: inline-block;
-    padding-top: 50px;
 }
 
-
 .text-container {
-    top: 0px;
-    left: 0px;
     padding: 8% 3% 0 8%;
     /* flex: 0 1 auto; */
     display: inline-block;
@@ -679,13 +676,20 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 
 /* * media queries */
 
-@media (max-width:850px) {
-    .w3-twothird,.w3-third {width: 100%}
-}
+/* @media (max-width:850px) { */
+/*     .w3-twothird,.w3-third {width: 100%} */
+/* } */
 
 
 @media only screen and (max-width:860px) {
-    .mySlides {flex-flow: column}
+    .w3-twothird,.w3-third {width: 100%}
+    .mySlides {
+	display: flex;
+	flex-flow: column;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	min-height: 700px
+    }
 
     .slideshow-container img {
         padding-top: 0;
@@ -727,8 +731,6 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 @media only screen and (max-width:830px) {
     .address:before,header .telephone {display: none}
 
-    .mySlides {min-height: 700px}
-    
     .logo,header {
         display: block;
         text-align: center
@@ -815,7 +817,7 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 
 
 @media only screen and (max-width:230px) {
-    .next,.prev {display: none}
+    .nojs-next,.nojs-prev {display: none}
 
     .additional-info-block h1 {font-size: 1em}
 
