@@ -154,7 +154,7 @@
 	</p>
     </div>
 
-    <a href="service/index.html?index=4">
+    <a href="naruzh_i_vnutren_reklama.html">
 	<div id="naruzh" class="naruzh additional-info-block w3-twothird">
 	    <h1>Наружная и внутренная<br>реклама</h1>
 	    <h3 class="moreinfo">Узнать больше</h3>
@@ -164,21 +164,21 @@
 
 
 <div style="padding: 0" class="w3-row-padding">
-    <a href="service/index.html?index=2">    
+    <a href="lazernaya_rezka.html">    
 	<div class="lazer additional-info-block w3-third">
 	    <h1>Лазерная резка<br>и гравировка</h1>
 	    <h3 class="moreinfo">Узнать больше</h3>
 	</div>
     </a>
 
-    <a href="service/index.html?index=3">
+    <a href="suveniry.html">
 	<div class="suveniry additional-info-block w3-third">
 	    <h1>Сувениры,<br>подарки, награды</h1>
 	    <h3 class="moreinfo">Узнать больше</h3>
 	</div>
     </a>
 
-    <a href="service/index.html?index=1">
+    <a href="shirokoformatnaya.html">
 	<div class="shirokoform additional-info-block w3-third">
 	    <h1>Широкоформатная<br>печать</h1>
 	    <h3 class="moreinfo">Узнать больше</h3>
@@ -189,21 +189,21 @@
 
 <div style="padding: 0;padding-bottom: 15px;" class="w3-row-padding">
 
-    <a href="service/index.html?index=5">
+    <a href="brendirovanie_odezhdy.html">
 	<div class="brendir additional-info-block w3-third">
 	    <h1>Брендирование<br>одежды</h1>
 	    <h3 class="moreinfo">Узнать больше</h3>
 	</div>
     </a>
 
-    <a href="service/index.html?index=7">
+    <a href="shevrony_nashivki.html">
 	<div class="shevrony additional-info-block w3-third">
 	    <h1>Шевроны, патчи,<br>нашивки</h1>
 	    <h3 class="moreinfo">Узнать больше</h3>
 	</div>
     </a>
 
-    <a href="service/index.html?index=8">
+    <a href="operativnaya_poligrafiya.html">
 	<div class="poligrafiya w3-third additional-info-block">
 	    <h1>Полиграфия</h1>
 	    <h3 class="moreinfo">Узнать больше</h3>
@@ -278,4 +278,45 @@
 	</ul>
     </div>
 </div>
+
+<script>
+
+ function js_enabled() {
+     var menu_items = document.querySelectorAll('.additional-info-block');
+     for(var i = 0;i < menu_items.length;i++)
+     {
+	 var old_href = menu_items[i].parentElement.getAttribute('href');
+	 var new_href;
+	 switch (old_href)
+	 {
+	     case "shirokoformatnaya.html":
+	     new_href = "service/index.html?index=1"
+	     break;
+	     case "lazernaya_rezka.html":
+	     new_href = "service/index.html?index=2"
+	     break;
+	     case "suveniry.html":
+	     new_href = "service/index.html?index=3"
+	     break;
+	     case "naruzh_i_vnutren_reklama.html":
+	     new_href = "service/index.html?index=4"
+	     break;
+	     case "brendirovanie_odezhdy.html":
+	     new_href = "service/index.html?index=5"
+	     break;
+	     case "shevrony_nashivki.html":
+	     new_href = "service/index.html?index=7"
+	     break;
+	     case "operativnaya_poligrafiya.html":
+	     new_href = "service/index.html?index=8"
+	     break;
+	 }
+	 // changing <a> tags
+	 menu_items[i].parentElement.setAttribute('href',new_href);
+     }
+ }
+ js_enabled();
+
+ 
+</script>
 {{ end }}

@@ -6,14 +6,14 @@
 
 <div class="service-container">
     <div class="service-menu">
-	<a onclick="choose_service(1)" href="javascript:void(0)">Широкоформатная печать</a>
-	<a onclick="choose_service(2)" href="javascript:void(0)">Лазерная резка и гравировка</a>
-	<a onclick="choose_service(3)" href="javascript:void(0)">Сувениры, подарки, награды</a>
-	<a onclick="choose_service(4)" href="javascript:void(0)">Наружная и внутренняя реклама</a>
-	<a onclick="choose_service(5)" href="javascript:void(0)">Брендирование одежды</a>
-	<a onclick="choose_service(6)" href="javascript:void(0)">Печать на спортивной форме</a>
-	<a onclick="choose_service(7)" href="javascript:void(0)">Шевроны, патчи, нашивки</a>
-	<a onclick="choose_service(8)" href="javascript:void(0)">Оперативная полиграфия</a>
+	<a href="shirokoformatnaya.html">Широкоформатная печать</a>
+	<a href="lazernaya_rezka.html">Лазерная резка и гравировка</a>
+	<a href="suveniry.html">Сувениры, подарки, награды</a>
+	<a href="naruzh_i_vnutren_reklama.html">Наружная и внутренняя реклама</a>
+	<a href="brendirovanie_odezhdy.html">Брендирование одежды</a>
+	<a href="pechat_na_sportforme.html">Печать на спортивной форме</a>
+	<a href="shevrony_nashivki.html">Шевроны, патчи, нашивки</a>
+	<a href="operativnaya_poligrafiya.html">Оперативная полиграфия</a>
     </div>
 
     <div class="services">
@@ -133,11 +133,24 @@
 
     </div>
 
-                            </div>
+    </div>
 
 </div>
 
 <script type="application/javascript">
+ // changing links
+ function js_enabled() {
+     var menu_items = document.querySelectorAll('.service-menu > a');
+     for(var i = 0;i < menu_items.length;i++)
+     {
+	 i++;
+	 var onclick = 'choose_service('+i+')'
+	 i--;
+	 menu_items[i].setAttribute('onclick',onclick);
+	 menu_items[i].setAttribute('href','javascript:void(0)');
+     }
+ }
+ js_enabled();
 
 
  {{ $galleryimages := .Page.Resources.Match "brendir/*.jpg" }}
@@ -539,8 +552,6 @@
  
  ///////////////////////// GALLERIES
 
- 
- 
 </script>
 
 <!-- SWIPE GALLERY -->
