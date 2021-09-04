@@ -546,7 +546,6 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 
 .slideshow-container {
     background-size: auto 100%;
-    position: relative;
     margin: auto;
     height: auto;
     min-height: 400px;
@@ -559,7 +558,6 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    display: none;
     min-width: 100%;
     background-position: 85% 50%
 }
@@ -603,7 +601,6 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 
 .slideshow-container img {
     top: 0px;
-    position: absolute;
     right: 20px;
     max-height: 350px;
     max-width: 100%;
@@ -615,7 +612,6 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 
 .text-container {
     top: 0px;
-    position: absolute;
     left: 0px;
     padding: 8% 3% 0 8%;
     /* flex: 0 1 auto; */
