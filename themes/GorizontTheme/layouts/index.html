@@ -42,7 +42,7 @@
 	    <source type="image/webp" srcset="/slideshow/images/poligraph.webp"/>
 	    <img src="/slideshow/images/poligraph.png"/>
 	</picture>
-    </div>
+            </div>
 
     <div class="mySlides fade">
 	<div class="text-container">
@@ -64,9 +64,40 @@
 	<span class="dot" onclick="currentSlide(3)"></span>
 	<span class="dot" onclick="currentSlide(4)"></span>
 	<div class="nojs-next" onclick="plusSlides(1)"><a>&#10095;</a></div>
-    </div>
+                </div>
     
 </div>
+<noscript>
+    <!-- background: url(./slideshow/images/background.png); -->
+    <div style="width: 800px;margin: auto;padding: 10px;">
+	<div class="w3-row-padding">
+	    <!-- background: url(./slideshow/images/ciferblat.png) no-repeat; background-size: 150px auto;background-position: 70% 70%;  -->
+	    <div style="border-right: 1px solid grey;" class="w3-half">
+		<p class="nojs-slideshow-dark-text">Изготовление сувенирной,<br>наградной&nbsp;<br class="maybe-hidden">и бизнес-продукции&nbsp;<br class="maybe-hidden">на заказ</p>
+		<p class="nojs-slideshow-light-text">Медали, статуэтки, вымпелы<br>Сувениры, подарки, награды<br>Лазерная резка<br>Гравировка</p>
+	    </div>
+
+	    <div style="padding-left: 20px;" class="w3-half">
+		<p class="nojs-slideshow-dark-text">Наружная и&nbsp;<br class="maybe-hidden">интерьерная реклама&nbsp;<br>Широкоформатная печать</p>
+		<p class="nojs-slideshow-light-text">Изготовление стендов, табличек, баннеров<br>Печать на оракале, виниле, фотобумаге<br>Распечатка чертежей, схем</p>
+	    </div>
+	</div>
+
+	<hr/>
+	
+	<div style="margin-top: 20px" class="w3-row-padding">
+	    <div style="border-right: 1px solid grey;" class="w3-half">
+		<p class="nojs-slideshow-dark-text">Цифровая&nbsp;<br>оперативная&nbsp;<br>печать</p>
+		<p class="nojs-slideshow-light-text">Оперативная полиграфия<br>Открытки, визитки, грамоты,<br>дипломы, поздравительные</p>
+	    </div>
+	    <div style="padding-left: 20px;" class="w3-half">
+		<p class="nojs-slideshow-dark-text">Печать на футболках&nbsp;<br>Спортформе&nbsp;<br>Брендирование</p>
+		<p class="nojs-slideshow-light-text">Повышайте узнаваевость вашего бизнеса<br>Стойкие, яркие принты<br>Проверенные технологии печати</p>
+	    </div>
+	</div>
+    </div>
+
+</noscript>
 <script>document.getElementsByClassName('slideshow-container')[0].style.display='block';</script>
 {{ if .IsHome }}
 <script src="/flickity.pkgd.min.js"></script>

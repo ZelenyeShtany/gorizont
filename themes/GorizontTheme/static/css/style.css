@@ -622,6 +622,19 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
     font-family: "CORBEL BOLD"
 }
 
+.nojs-slideshow-dark-text,.nojs-slideshow-light-text {
+    color: #3b3d3e;
+    font-size: 1.5em;
+    font-family: "CORBEL BOLD"
+}
+
+.nojs-slideshow-light-text {
+    color: black;
+    font-size: 1em;
+    padding-top: 2%
+}
+
+
 .slideshow-light-text {
     color: #fdfdfd;
     font-size: 1.5em;
@@ -670,8 +683,18 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
     width: 33.33333%
 }
 
+.w3-half {
+    float: left;
+    width: 49%
+}
+
+
 .w3-row-padding:after,.w3-row-padding:before
 {content:"";display:table;clear:both}
+
+
+
+/* * no-js slideshow */
 
 
 /* * media queries */
@@ -682,7 +705,7 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 
 
 @media only screen and (max-width:860px) {
-    .w3-twothird,.w3-third {width: 100%}
+    .w3-twothird,.w3-third,.w3-half {width: 100%}
     .mySlides {
 	display: flex;
 	flex-flow: column;
