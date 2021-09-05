@@ -20,35 +20,35 @@
     <div class="services">
 
 	<div class="service">
-	    {{ (.Page.Resources.GetMatch "shirokoform/*.md").Content }}
+	    {{ (.Site.GetPage "/shirokoform").Content }}
 	</div>
 	
 	<div class="service">
-	    {{ (.Page.Resources.GetMatch "lazer/*.md").Content }}
+	    {{ (.Site.GetPage "/lazer").Content }}
 	</div>
 	
 	<div class="service">
-	    {{ (.Page.Resources.GetMatch "suveniry/*.md").Content }}
+	    {{ (.Site.GetPage "/suveniry").Content }}
 	</div>
 	
 	<div class="service">
-	    {{ (.Page.Resources.GetMatch "naruzh/*.md").Content }}
+	    {{ (.Site.GetPage "/naruzh").Content }}
 	</div>
 	
 	<div class="service">
-	    {{ (.Page.Resources.GetMatch "brendir/*.md").Content }}
+	    {{ (.Site.GetPage "/brendir").Content }}
 	</div>
 	
 	<div class="service">
-	    {{ (.Page.Resources.GetMatch "sport/*.md").Content }}
+	    {{ (.Site.GetPage "/sport").Content }}
 	</div>
 
 	<div class="service">
-	    {{ (.Page.Resources.GetMatch "shevrony/*.md").Content }}
+	    {{ (.Site.GetPage "/shevrony").Content }}
 	</div>
 
 	<div class="service">
-	    {{ (.Page.Resources.GetMatch "poligraph/*.md").Content }}
+	    {{ (.Site.GetPage "/poligraph").Content }}
 	</div>
 	
 	<div class="cycle">
@@ -147,7 +147,7 @@
  js_enabled();
 
 
- {{ $galleryimages := .Page.Resources.Match "brendir/*.jpg" }}
+ {{ $galleryimages := (.Site.GetPage "/brendir").Resources.Match "*.jpg" }}
  var brendir = [
      {{ range $galleryimages }}
      [ {{ $thumbnail := .Resize "120x" }}
@@ -159,7 +159,7 @@
  ];
 
 
- {{ $galleryimages := .Page.Resources.Match "sport/*.jpg" }}
+ {{ $galleryimages := (.Site.GetPage "/sport").Resources.Match "*.jpg" }}
  var sport = [
      {{ range $galleryimages }}
      [ {{ $thumbnail := .Resize "120x" }}
@@ -171,7 +171,7 @@
  ];
 
  
- {{ $galleryimages := .Page.Resources.Match "lazer/*.jpg" }}
+ {{ $galleryimages := (.Site.GetPage "/lazer").Resources.Match "*.jpg" }}
  var lazer = [
      {{ range $galleryimages }}
      [ {{ $thumbnail := .Resize "120x" }}
@@ -182,7 +182,7 @@
      {{ end }}
  ];
 
- {{ $galleryimages := .Page.Resources.Match "naruzh/*.jpg" }}
+ {{ $galleryimages := (.Site.GetPage "/naruzh").Resources.Match "*.jpg" }}
  var naruzh = [
      {{ range $galleryimages }}
      [ {{ $thumbnail := .Resize "120x" }}
@@ -193,7 +193,7 @@
      {{ end }}
  ];
 
- {{ $galleryimages := .Page.Resources.Match "poligraph/*.jpg" }}
+ {{ $galleryimages := (.Site.GetPage "/poligraph").Resources.Match "*.jpg" }}
  var poligraph = [
      {{ range $galleryimages }}
      [ {{ $thumbnail := .Resize "120x" }}
@@ -204,7 +204,7 @@
      {{ end }}
  ];
 
- {{ $galleryimages := .Page.Resources.Match "shevrony/*.jpg" }}
+ {{ $galleryimages := (.Site.GetPage "/shevrony").Resources.Match "*.jpg" }}
  var shevrony = [
      {{ range $galleryimages }}
      [ {{ $thumbnail := .Resize "120x" }}
@@ -215,7 +215,7 @@
      {{ end }}
  ];
 
- {{ $galleryimages := .Page.Resources.Match "suveniry/*.jpg" }}
+ {{ $galleryimages := (.Site.GetPage "/suveniry").Resources.Match "*.jpg" }}
  var suveniry = [
      {{ range $galleryimages }}
      [ {{ $thumbnail := .Resize "120x" }}
