@@ -13,6 +13,6 @@
     {{ $htmlTable := replaceRE "<thead>" "" $htmlTable }}
     {{ $htmlTable := replaceRE "</thead>" "" $htmlTable }}
     {{ $htmlTable := replaceRE "<td></td>" "" $htmlTable }}
-    {{ $htmlTable := replaceRE "<table +class=\".*?\" *>" "<table>" $htmlTable }}
+    {{ $htmlTable := replaceRE "<table +class=\".*?\" *>" "<table class=\"service-table-without-descr\" >" $htmlTable }}
     
     {{ $htmlTable | safeHTML }}

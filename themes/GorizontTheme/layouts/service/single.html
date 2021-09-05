@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ $tmpclassname := "service-subjects-only" }}
 <div class="breadcrumbs">
     <a href="/">Главная</a>
     <a> &gt Наши услуги</a>
@@ -17,121 +18,114 @@
     </div>
 
     <div class="services">
-    
-    <div class="service">
-	{{ $shirokoform := .Page.Resources.GetMatch "shirokoform/*.md" }}
-	{{ $shirokoform.Content }}
-    </div>
-    
-    <div class="service-subjects-only">
-	{{ $lazer := .Page.Resources.GetMatch "lazer/*.md" }}
-	{{ $lazer.Content }}
-    </div>
-    <div class="service-subjects-only">
-	{{ $suveniry := .Page.Resources.GetMatch "suveniry/*.md" }}
-	{{ $suveniry.Content }}
-    </div>
 
-    <div class="service-subjects-only">
-	{{ $naruzh := .Page.Resources.GetMatch "naruzh/*.md" }}
-	{{ $naruzh.Content }}
-    </div>
-
-    <div class="service-subjects-only">
-	{{ $brendir := .Page.Resources.GetMatch "brendir/*.md" }}
-	{{ $brendir.Content }}
-    </div>
-
-    <div class="service">
-	{{ $sport := .Page.Resources.GetMatch "sport/*.md" }}
-	{{ $sport.Content }}
-    </div>
-
-    <div class="service">
-	{{ $shevrony := .Page.Resources.GetMatch "shevrony/*.md" }}
-	{{ $shevrony.Content }}
-    </div>
-
-    <div class="service-subjects-only">
-	{{ $poligraph := .Page.Resources.GetMatch "poligraph/*.md" }}
-	{{ $poligraph.Content }}
-    </div>
-    
-    <div class="cycle">
-	<h1 style="text-align: center">К вашим услугам полный цикл работ</h1>
-	<div class="w3-row-padding">
-	    <div class="w3-third"> <a style="background-image: url('../icons/polnyi-cicl-rabot/zamery.png')">Замеры и дизайн</a></div>
-	    <div class="w3-third"> <a style="background-image: url('../icons/polnyi-cicl-rabot/izgotovlenie.png')">Изготовление продукции</a></div>
-	    <div class="w3-third"> <a style="background-image: url('../icons/polnyi-cicl-rabot/dostavka.png')">Доставка и монтаж</a></div>
+	<div class="service">
+	    {{ (.Page.Resources.GetMatch "shirokoform/*.md").Content }}
 	</div>
-    </div>
+
+	<div class="service">
+	    {{ (.Page.Resources.GetMatch "lazer/*.md").Content }}
+	</div>
+
+	<div class="service">
+	    {{ (.Page.Resources.GetMatch "suveniry/*.md").Content }}
+	</div>
+
+	<div class="service">
+	    {{ (.Page.Resources.GetMatch "naruzh/*.md").Content }}
+	</div>
+
+	<div class="service">
+	    {{ (.Page.Resources.GetMatch "brendir/*.md").Content }}
+	</div>
+
+	<div class="service">
+	    {{ (.Page.Resources.GetMatch "sport/*.md").Content }}
+	</div>
+
+	<div class="service">
+	    {{ (.Page.Resources.GetMatch "shevrony/*.md").Content }}
+	</div>
+
+	<div class="service">
+	    {{ (.Page.Resources.GetMatch "poligraph/*.md").Content }}
+	</div>
+	
+	<div class="cycle">
+	    <h1 style="text-align: center">К вашим услугам полный цикл работ</h1>
+	    <div class="w3-row-padding">
+		<div class="w3-third"> <a style="background-image: url('../icons/polnyi-cicl-rabot/zamery.png')">Замеры и дизайн</a></div>
+		<div class="w3-third"> <a style="background-image: url('../icons/polnyi-cicl-rabot/izgotovlenie.png')">Изготовление продукции</a></div>
+		<div class="w3-third"> <a style="background-image: url('../icons/polnyi-cicl-rabot/dostavka.png')">Доставка и монтаж</a></div>
+	    </div>
+	</div>
 
     </div>
     
     <!-- Root element of PhotoSwipe. Must have class pswp. -->
     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
+	<!-- Background of PhotoSwipe. 
+	     It's a separate element as animating opacity is faster than rgba(). -->
+	<div class="pswp__bg"></div>
 
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
+	<!-- Slides wrapper with overflow:hidden. -->
+	<div class="pswp__scroll-wrap">
 
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
+	    <!-- Container that holds slides. 
+		 PhotoSwipe keeps only 3 of them in the DOM to save memory.
+		 Don't modify these 3 pswp__item elements, data is added later on. -->
+	    <div class="pswp__container">
+		<div class="pswp__item"></div>
+		<div class="pswp__item"></div>
+		<div class="pswp__item"></div>
+	    </div>
 
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
+	    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+	    <div class="pswp__ui pswp__ui--hidden">
 
-            <div class="pswp__top-bar">
+		<div class="pswp__top-bar">
 
-                <!--  Controls are self-explanatory. Order can be changed. -->
+		    <!--  Controls are self-explanatory. Order can be changed. -->
 
-                <div class="pswp__counter"></div>
+		    <div class="pswp__counter"></div>
 
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+		    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 
-                <button class="pswp__button pswp__button--share" title="Share"></button>
+		    <button class="pswp__button pswp__button--share" title="Share"></button>
 
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+		    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
 
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+		    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
 
-                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
-                    </div>
-                </div>
-            </div>
+		    <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+		    <!-- element will get class pswp__preloader--active when preloader is running -->
+		    <div class="pswp__preloader">
+			<div class="pswp__preloader__icn">
+			    <div class="pswp__preloader__cut">
+				<div class="pswp__preloader__donut"></div>
+			    </div>
+			</div>
+		    </div>
+		</div>
 
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div> 
-            </div>
+		<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+		    <div class="pswp__share-tooltip"></div> 
+		</div>
 
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
+		<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+		</button>
 
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
+		<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+		</button>
 
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
+		<div class="pswp__caption">
+		    <div class="pswp__caption__center"></div>
+		</div>
 
-        </div>
+	    </div>
 
-    </div>
+	</div>
 
     </div>
 
@@ -239,47 +233,47 @@
      // (children of gallerySelector)
      var parseThumbnailElements = function(el) {
          var thumbElements = el.childNodes,
-             numNodes = thumbElements.length,
-             items = [],
-             figureEl,
-             linkEl,
-             size,
-             item;
+	     numNodes = thumbElements.length,
+	     items = [],
+	     figureEl,
+	     linkEl,
+	     size,
+	     item;
 
          for(var i = 0; i < numNodes; i++) {
 
-             figureEl = thumbElements[i]; // <figure> element
+	     figureEl = thumbElements[i]; // <figure> element
 
-             // include only element nodes 
-             if(figureEl.nodeType !== 1) {
+	     // include only element nodes 
+	     if(figureEl.nodeType !== 1) {
                  continue;
-             }
+	     }
 
-             linkEl = figureEl.children[0]; // <a> element
+	     linkEl = figureEl.children[0]; // <a> element
 
-             size = linkEl.getAttribute('data-size').split('x');
+	     size = linkEl.getAttribute('data-size').split('x');
 
-             // create slide object
-             item = {
+	     // create slide object
+	     item = {
                  src: linkEl.getAttribute('href'),
                  w: parseInt(size[0], 10),
                  h: parseInt(size[1], 10)
-             };
+	     };
 
 
 
-             if(figureEl.children.length > 1) {
+	     if(figureEl.children.length > 1) {
                  // <figcaption> content
                  item.title = figureEl.children[1].innerHTML; 
-             }
+	     }
 
-             if(linkEl.children.length > 0) {
+	     if(linkEl.children.length > 0) {
                  // <img> thumbnail element, retrieving thumbnail url
                  item.msrc = linkEl.children[0].getAttribute('src');
-             } 
+	     } 
 
-             item.el = figureEl; // save link to element for getThumbBoundsFn
-             items.push(item);
+	     item.el = figureEl; // save link to element for getThumbBoundsFn
+	     items.push(item);
          }
 
          return items;
@@ -299,38 +293,38 @@
 
          // find root element of slide
          var clickedListItem = closest(eTarget, function(el) {
-             return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+	     return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
          });
 
          if(!clickedListItem) {
-             return;
+	     return;
          }
 
          // find index of clicked item by looping through all child nodes
          // alternatively, you may define index via data- attribute
          var clickedGallery = clickedListItem.parentNode,
-             childNodes = clickedListItem.parentNode.childNodes,
-             numChildNodes = childNodes.length,
-             nodeIndex = 0,
-             index;
+	     childNodes = clickedListItem.parentNode.childNodes,
+	     numChildNodes = childNodes.length,
+	     nodeIndex = 0,
+	     index;
 
          for (var i = 0; i < numChildNodes; i++) {
-             if(childNodes[i].nodeType !== 1) { 
+	     if(childNodes[i].nodeType !== 1) { 
                  continue; 
-             }
+	     }
 
-             if(childNodes[i] === clickedListItem) {
+	     if(childNodes[i] === clickedListItem) {
                  index = nodeIndex;
                  break;
-             }
-             nodeIndex++;
+	     }
+	     nodeIndex++;
          }
 
 
 
          if(index >= 0) {
-             // open PhotoSwipe if valid index found
-             openPhotoSwipe( index, clickedGallery );
+	     // open PhotoSwipe if valid index found
+	     openPhotoSwipe( index, clickedGallery );
          }
          return false;
      };
@@ -338,26 +332,26 @@
      // parse picture index and gallery index from URL (#&pid=1&gid=2)
      var photoswipeParseHash = function() {
          var hash = window.location.hash.substring(1),
-             params = {};
+	     params = {};
 
          if(hash.length < 5) {
-             return params;
+	     return params;
          }
 
          var vars = hash.split('&');
          for (var i = 0; i < vars.length; i++) {
-             if(!vars[i]) {
+	     if(!vars[i]) {
                  continue;
-             }
-             var pair = vars[i].split('=');  
-             if(pair.length < 2) {
+	     }
+	     var pair = vars[i].split('=');  
+	     if(pair.length < 2) {
                  continue;
-             }           
-             params[pair[0]] = pair[1];
+	     }           
+	     params[pair[0]] = pair[1];
          }
 
          if(params.gid) {
-             params.gid = parseInt(params.gid, 10);
+	     params.gid = parseInt(params.gid, 10);
          }
 
          return params;
@@ -365,55 +359,55 @@
 
      var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
          var pswpElement = document.querySelectorAll('.pswp')[0],
-             gallery,
-             options,
-             items;
+	     gallery,
+	     options,
+	     items;
 
          items = parseThumbnailElements(galleryElement);
 
          // define options (if needed)
          options = {
 
-             // define gallery index (for URL)
-             galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+	     // define gallery index (for URL)
+	     galleryUID: galleryElement.getAttribute('data-pswp-uid'),
 
-             getThumbBoundsFn: function(index) {
+	     getThumbBoundsFn: function(index) {
                  // See Options -> getThumbBoundsFn section of documentation for more info
                  var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
-                     pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
-                     rect = thumbnail.getBoundingClientRect(); 
+		     pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+		     rect = thumbnail.getBoundingClientRect(); 
 
                  return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
-             }
+	     }
 
          };
 
          // PhotoSwipe opened from URL
          if(fromURL) {
-             if(options.galleryPIDs) {
+	     if(options.galleryPIDs) {
                  // parse real index when custom PIDs are used 
                  // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
                  for(var j = 0; j < items.length; j++) {
-                     if(items[j].pid == index) {
+		     if(items[j].pid == index) {
                          options.index = j;
                          break;
-                     }
+		     }
                  }
-             } else {
+	     } else {
                  // in URL indexes start from 1
                  options.index = parseInt(index, 10) - 1;
-             }
+	     }
          } else {
-             options.index = parseInt(index, 10);
+	     options.index = parseInt(index, 10);
          }
 
          // exit if index not found
          if( isNaN(options.index) ) {
-             return;
+	     return;
          }
 
          if(disableAnimation) {
-             options.showAnimationDuration = 0;
+	     options.showAnimationDuration = 0;
          }
 
          // Pass data to PhotoSwipe and initialize it
@@ -440,12 +434,12 @@
      var result = null,
          tmp = [];
      location.search
-             .substr(1)
-             .split("&")
-             .forEach(function (item) {
+	     .substr(1)
+	     .split("&")
+	     .forEach(function (item) {
 		 tmp = item.split("=");
 		 if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
-             });
+	     });
      return result;
  }
 
