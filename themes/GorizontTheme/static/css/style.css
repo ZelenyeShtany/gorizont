@@ -533,6 +533,7 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 /* ** gallery */
 
 .my-gallery {
+    margin-top: 15px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center/* flex-start */
