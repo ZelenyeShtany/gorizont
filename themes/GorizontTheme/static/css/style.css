@@ -333,6 +333,12 @@ h1,li,p.lightgray { color: #545454}
     transition: max-height .5s
 }
 
+.no-js .clients-logos
+{
+    overflow: auto;
+    max-height: none;
+}
+
 .clients-logos img,footer>* {
     margin: auto;
     display: inline-block
@@ -813,6 +819,9 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 
 
 @media only screen and (max-width:320px) {
+    .additional-info-block {
+	height: 140px;
+    }
     .nojs-slideshow-light-text,.slideshow-dark-text,.slideshow-light-text {font-size: 1em}
     .nojs-slideshow-dark-text {font-size: 1.2em}
     .mySlides {min-height: 470px}
@@ -845,7 +854,9 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 
 @media only screen and (max-width:230px) {
     .nojs-next,.nojs-prev {display: none}
-
+    .additional-info-block {
+	height: 120px;
+    }
     .additional-info-block h1 {font-size: 1em}
 
     .dot {

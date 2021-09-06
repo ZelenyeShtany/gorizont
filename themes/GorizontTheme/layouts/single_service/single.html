@@ -5,11 +5,13 @@
 </div>
 
 <div class="service-container">
+    <a></a>
     <div class="service-menu">
 	{{ $servicemenu := .Site.RegularPages}}
+	{{ $curaddress := .RelPermalink}}
 	{{ range $servicemenu}}
 	{{ if eq .Type "single_service" }}
-	<a href="{{ .RelPermalink }}">{{ .Name }} </a>
+	<a {{ if findRE $curaddress .RelPermalink }} class="active" {{ end }}href="{{ .RelPermalink }}">{{ .Name }} </a>
 	{{ end }}
 	{{ end }}
     </div>
