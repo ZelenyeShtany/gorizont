@@ -1,5 +1,6 @@
 ---
 title: "Широкоформатная печать"
+type: single_service
 ---
 {{<tablewithdescr>}}
 

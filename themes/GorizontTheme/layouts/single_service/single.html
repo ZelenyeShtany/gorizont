@@ -1,0 +1,47 @@
+{{ define "main" }}
+<div class="breadcrumbs">
+    <a href="/">Главная</a>
+    <a> &gt Наши услуги</a>
+</div>
+
+<div class="service-container">
+    <div class="service-menu">
+	{{ $servicemenu := .Site.RegularPages}}
+	{{ range $servicemenu}}
+	{{ if eq .Type "single_service" }}
+	<a href="{{ .RelPermalink }}">{{ .Name }} </a>
+	{{ end }}
+	{{ end }}
+    </div>
+
+    <div class="services">
+
+	<div class="service">
+	    {{ .Content }}
+	    <div class="my-gallery">
+		{{ $galleryimages := .Resources.Match "*.jpg" }}
+		{{ range $galleryimages }}
+		{{ $thumbnail := .Fill "120x120" }}
+		<a href="{{ .Name }}">
+		    {{ $newReplacement := replaceRE "^/service/" "./" $thumbnail.RelPermalink }}
+		    <img src="{{ $newReplacement }}"/>
+		</a>
+		{{ end }}
+
+	    </div>
+	</div>
+	
+	<div class="cycle">
+	    <h1 style="text-align: center">К вашим услугам полный цикл работ</h1>
+	    <div class="w3-row-padding">
+		<div class="w3-third"> <a style="background-image: url('../icons/polnyi-cicl-rabot/zamery.png')">Замеры и дизайн</a></div>
+		<div class="w3-third"> <a style="background-image: url('../icons/polnyi-cicl-rabot/izgotovlenie.png')">Изготовление продукции</a></div>
+		<div class="w3-third"> <a style="background-image: url('../icons/polnyi-cicl-rabot/dostavka.png')">Доставка и монтаж</a></div>
+	    </div>
+	</div>
+	
+    </div>
+    
+</div>
+
+{{ end }}

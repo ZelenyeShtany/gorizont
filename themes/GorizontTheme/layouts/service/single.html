@@ -1,5 +1,4 @@
 {{ define "main" }}
-{{ $tmpclassname := "service-subjects-only" }}
 <div class="breadcrumbs">
     <a href="/">Главная</a>
     <a> &gt Наши услуги</a>
@@ -7,14 +6,14 @@
 
 <div class="service-container">
     <div class="service-menu">
-	<a href="shirokoformatnaya.html">Широкоформатная печать</a>
-	<a href="lazernaya_rezka.html">Лазерная резка и гравировка</a>
-	<a href="suveniry.html">Сувениры, подарки, награды</a>
-	<a href="naruzh_i_vnutren_reklama.html">Наружная и внутренняя реклама</a>
-	<a href="brendirovanie_odezhdy.html">Брендирование одежды</a>
-	<a href="pechat_na_sportforme.html">Печать на спортивной форме</a>
-	<a href="shevrony_nashivki.html">Шевроны, патчи, нашивки</a>
-	<a href="operativnaya_poligrafiya.html">Оперативная полиграфия</a>
+	<a href="/shirokoformatnaya">Широкоформатная печать</a>
+	<a href="/lazernaya_rezka">Лазерная резка и гравировка</a>
+	<a href="/suveniry">Сувениры, подарки, награды</a>
+	<a href="/naruzh_i_vnutren_reklama">Наружная и внутренняя реклама</a>
+	<a href="/brendirovanie_odezhdy">Брендирование одежды</a>
+	<a href="/pechat_na_sportforme">Печать на спортивной форме</a>
+	<a href="/shevrony_nashivki">Шевроны, патчи, нашивки</a>
+	<a href="/operativnaya_poligrafiya">Оперативная полиграфия</a>
     </div>
 
     <div class="services">
@@ -147,11 +146,11 @@
  js_enabled();
 
 
- {{ $galleryimages := (.Site.GetPage "/brendir").Resources.Match "*.jpg" }}
+ {{ $galleryimages := (.Site.GetPage "/brendirovanie_odezhdy").Resources.Match "*.jpg" }}
  var brendir = [
      {{ range $galleryimages }}
-     [ {{ $thumbnail := .Resize "120x" }}
-	 '{{ .Name }}',
+     [ {{ $thumbnail := .Fill "120x120" }}
+	 '{{ .RelPermalink }}',
        '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
        '{{ .Width }}x{{ .Height }}'
      ],
@@ -159,11 +158,11 @@
  ];
 
 
- {{ $galleryimages := (.Site.GetPage "/sport").Resources.Match "*.jpg" }}
+ {{ $galleryimages := (.Site.GetPage "/pechat_na_sportforme").Resources.Match "*.jpg" }}
  var sport = [
      {{ range $galleryimages }}
-     [ {{ $thumbnail := .Resize "120x" }}
-	 '{{ .Name }}',
+     [ {{ $thumbnail := .Fill "120x120" }}
+	 '{{ .RelPermalink }}',
        '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
        '{{ .Width }}x{{ .Height }}'
      ],
@@ -171,44 +170,44 @@
  ];
 
  
- {{ $galleryimages := (.Site.GetPage "/lazer").Resources.Match "*.jpg" }}
+ {{ $galleryimages := (.Site.GetPage "/lazernaya_rezka").Resources.Match "*.jpg" }}
  var lazer = [
      {{ range $galleryimages }}
-     [ {{ $thumbnail := .Resize "120x" }}
-	 '{{ .Name }}',
+     [ {{ $thumbnail := .Fill "120x120" }}
+	 '{{ .RelPermalink }}',
        '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
        '{{ .Width }}x{{ .Height }}'
      ],
      {{ end }}
  ];
 
- {{ $galleryimages := (.Site.GetPage "/naruzh").Resources.Match "*.jpg" }}
+ {{ $galleryimages := (.Site.GetPage "/naruzh_i_vnutren_reklama").Resources.Match "*.jpg" }}
  var naruzh = [
      {{ range $galleryimages }}
-     [ {{ $thumbnail := .Resize "120x" }}
-	 '{{ .Name }}',
+     [ {{ $thumbnail := .Fill "120x120" }}
+	 '{{ .RelPermalink }}',
        '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
        '{{ .Width }}x{{ .Height }}'
      ],
      {{ end }}
  ];
 
- {{ $galleryimages := (.Site.GetPage "/poligraph").Resources.Match "*.jpg" }}
+ {{ $galleryimages := (.Site.GetPage "/operativnaya_poligrafiya").Resources.Match "*.jpg" }}
  var poligraph = [
      {{ range $galleryimages }}
-     [ {{ $thumbnail := .Resize "120x" }}
-	 '{{ .Name }}',
+     [ {{ $thumbnail := .Fill "120x120" }}
+	 '{{ .RelPermalink }}',
        '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
        '{{ .Width }}x{{ .Height }}'
      ],
      {{ end }}
  ];
 
- {{ $galleryimages := (.Site.GetPage "/shevrony").Resources.Match "*.jpg" }}
+ {{ $galleryimages := (.Site.GetPage "/shevrony_nashivki").Resources.Match "*.jpg" }}
  var shevrony = [
      {{ range $galleryimages }}
-     [ {{ $thumbnail := .Resize "120x" }}
-	 '{{ .Name }}',
+     [ {{ $thumbnail := .Fill "120x120" }}
+	 '{{ .RelPermalink }}',
        '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
        '{{ .Width }}x{{ .Height }}'
      ],
@@ -218,8 +217,8 @@
  {{ $galleryimages := (.Site.GetPage "/suveniry").Resources.Match "*.jpg" }}
  var suveniry = [
      {{ range $galleryimages }}
-     [ {{ $thumbnail := .Resize "120x" }}
-	 '{{ .Name }}',
+     [ {{ $thumbnail := .Fill "120x120" }}
+	 '{{ .RelPermalink }}',
        '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
        '{{ .Width }}x{{ .Height }}'
      ],
