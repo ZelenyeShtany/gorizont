@@ -531,8 +531,8 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
     justify-content: flex-start
 }
 
-.my-gallery figure {margin: 5px}
-.my-gallery img {margin: 2px} /* for no-js version */
+.my-gallery figure {margin: 1px}
+.my-gallery img {margin: 1px} /* for no-js version */
 /* * slideshow */
 
 .webp .slideshow-container {background-image: url(../slideshow/images/background.webp); background-repeat: no-repeat;}

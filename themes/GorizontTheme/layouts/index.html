@@ -104,7 +104,6 @@
 <link rel="stylesheet" type="text/css" href="/flickity.css">
 
 <script src="/slideshow/slideshow.js"></script>
-<script src="/spoiler.js"></script>
 {{ end }}
 
 
@@ -252,6 +251,7 @@
 	</picture>
     </div>
 </div>
+<script src="/spoiler.js"></script>
 
 <div class="about">
     <h1>О компании</h1>
@@ -286,27 +286,28 @@
      {
 	 var old_href = menu_items[i].parentElement.getAttribute('href');
 	 var new_href;
+	 console.log(old_href);
 	 switch (old_href)
 	 {
-	     case "shirokoformatnaya.html":
+	     case "./shirokoformatnaya":
 	     new_href = "service/index.html?index=1"
 	     break;
-	     case "lazernaya_rezka.html":
+	     case "./lazernaya_rezka":
 	     new_href = "service/index.html?index=2"
 	     break;
-	     case "suveniry.html":
+	     case "./suveniry":
 	     new_href = "service/index.html?index=3"
 	     break;
-	     case "naruzh_i_vnutren_reklama.html":
+	     case "./naruzh_i_vnutren_reklama":
 	     new_href = "service/index.html?index=4"
 	     break;
-	     case "brendirovanie_odezhdy.html":
+	     case "./brendirovanie_odezhdy":
 	     new_href = "service/index.html?index=5"
 	     break;
-	     case "shevrony_nashivki.html":
+	     case "./shevrony_nashivki":
 	     new_href = "service/index.html?index=7"
 	     break;
-	     case "operativnaya_poligrafiya.html":
+	     case "./operativnaya_poligrafiya":
 	     new_href = "service/index.html?index=8"
 	     break;
 	 }
