@@ -467,14 +467,9 @@
      
      // code for gallery
      var old_gallery = document.getElementsByClassName("my-gallery")[0];
-     if (typeof old_gallery !== 'undefined') {
-	 old_gallery.remove();
+     if (old_gallery) {
+	 old_gallery.style.display = "none";
      }
-
-     var new_gallery_container = document.createElement('div');
-     new_gallery_container.setAttribute("itemscope","");
-     new_gallery_container.setAttribute("itemtype","http://schema.org/ImageGallery");
-     new_gallery_container.setAttribute("class","my-gallery");
 
      var gallery_var_name;
      console.log(n);
@@ -503,16 +498,15 @@
 	 case 8:
 	     gallery_var_name = "poligraph";
 	     break;
-	     /* default:
-		gallery_var_name = "poligraph"; */
      }
-     
-     /* console.log("asdasd"); */
-     /* console.log(gallery_var_name);
-      * console.log(window[gallery_var_name]);
-      */
-     
-     if (typeof window[gallery_var_name] !== 'undefined') {
+
+     var new_gallery_container = document.createElement('div');
+     new_gallery_container.setAttribute("itemscope","");
+     new_gallery_container.setAttribute("itemtype","http://schema.org/ImageGallery");
+     new_gallery_container.setAttribute("class","my-gallery");
+     new_gallery_container.id = gallery_var_name;
+
+     if (typeof window[gallery_var_name]  && !document.getElementById(gallery_var_name)) {
 
 	 for (let i = 0; i < window[gallery_var_name].length; i++) {
 	     let figuretmp = document.createElement('figure');
@@ -540,6 +534,9 @@
 	 // execute above function
 	 initPhotoSwipeFromDOM('.my-gallery');
      }
+     if(document.getElementById(gallery_var_name))
+	 document.getElementById(gallery_var_name).style.display = "flex"; 
+
      window.history.pushState('', 'New Page Title', `?index=${n}`);
  }
  

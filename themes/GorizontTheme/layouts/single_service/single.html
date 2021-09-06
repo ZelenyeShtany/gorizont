@@ -17,6 +17,7 @@
     <div class="services">
 
 	<div class="service">
+	    <h1>{{ .Title }}</h1>
 	    {{ .Content }}
 	    <div class="my-gallery">
 		{{ $galleryimages := .Resources.Match "*.jpg" }}
