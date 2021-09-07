@@ -8,7 +8,7 @@ a{background-color:transparent}a:active,a:hover{outline-width:0}
 abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
 b,strong{font-weight:bolder}dfn{font-style:italic}mark{background:#ff0;color:#000}
 small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
-sub{bottom:-0.25em}sup{top:-0.5em}figure{margin:1em 40px}img{border-style:none}
+sub{bottom:-0.25em}sup{top:-0.5em}img{border-style:none}
 code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}hr{box-sizing:content-box;height:0;overflow:visible}
 button,input,select,textarea,optgroup{font:inherit;margin:0}optgroup{font-weight:bold}
 button,input{overflow:visible}button,select{text-transform:none}
@@ -536,16 +536,15 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
     margin-top: 15px;
     display: flex;
     flex-flow: row wrap;
-    justify-content: center/* flex-start */
+    justify-content: flex-start/* center */
 }
 
-.my-gallery figure {margin: 1px}
-.my-gallery img {margin: 1px} /* for no-js version */
+.my-gallery figure {margin: 0;padding: 1px;width: 16%;}
+.my-gallery figure img {margin: 1px; width: 100%} /* for no-js version */
 /* * slideshow */
 
 .webp .slideshow-container {background-image: url(../slideshow/images/background.webp); background-repeat: no-repeat;}
 .no-webp .slideshow-container { background-image: url(../slideshow/images/background.png); background-repeat: no-repeat; }
-.no-js .slideshow-container { background-image: url(../slideshow/images/background.png); background-repeat: no-repeat; }
 
 .slideshow-container {
     display: none;
@@ -563,43 +562,6 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
     align-items: center;
     min-width: 100%;
     background-position: 85% 50%
-}
-
-.nojs-next,.nojs-prev {
-    display: none;
-    text-align: center;
-    vertical-align: middle;
-    transform: translate(0,50%);
-    cursor: pointer;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    margin-top: -35px;
-    color: #fff;
-    font-weight: 700;
-    transition: .6s ease;
-    user-select: none;
-    line-height: 0;
-    font-size: 18px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center
-}
-
-.no-js .nojs-next { display: inline-block; }
-.no-js .nojs-prev { display: inline-block; }
-
-
-
-.nojs-next a,.nojs-prev a {transform: translate(0,12%)}
-
-.nojs-next {right: 80px}
-
-.nojs-prev {left: 80px}
-
-.nojs-next:hover,.nojs-prev:hover {
-    background-color: #ebebeb;
-    color: green
 }
 
 .slideshow-container img {
@@ -713,6 +675,7 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 
 
 @media only screen and (max-width:860px) {
+    .my-gallery figure { width: 20%; }
     .w3-twothird,.w3-third {width: 100%}
     .mySlides {
 	display: flex;
@@ -761,7 +724,6 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 
 @media only screen and (max-width:830px) {
     .address:before,header .telephone {display: none}
-
     .logo,header {
         display: block;
         text-align: center
@@ -781,6 +743,7 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 }
 
 @media only screen and (max-width:620px) {
+    .my-gallery figure { width: 25%; }
     .nojs-slideshow:first-child { border-right: none; }
     .nojs-slideshow:nth-child(2) { padding-left: 0; }
     .nojs-slideshow-container hr {display: none}
@@ -792,9 +755,7 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 
 
 @media only screen and (max-width:440px) {
-    .my-gallery img {width: 80px;}
     .slideshow-container .slideshow-dark-text .maybe-hidden { display: none; }
-    
     .service-table td:nth-child(2) { width: 100% }
     
     .service-table td:first-child,.service-table-without-descr td {
@@ -819,6 +780,9 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
     .slideshow-light-text {font-size: 1em}
 }
 
+@media only screen and (max-width:360px) {
+    .my-gallery figure { width: 33%; }
+}
 
 @media only screen and (max-width:320px) {
     .additional-info-block {
@@ -855,7 +819,7 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 
 
 @media only screen and (max-width:230px) {
-    .nojs-next,.nojs-prev {display: none}
+    .my-gallery figure { width: 50%; }
     .additional-info-block {
 	height: 120px;
     }
