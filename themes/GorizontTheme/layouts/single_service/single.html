@@ -25,10 +25,12 @@
 		{{ $galleryimages := .Resources.Match "*.jpg" }}
 		{{ range $galleryimages }}
 		{{ $thumbnail := .Fill "120x120" }}
+		<figure>
 		<a href="{{ .Name }}">
 		    {{ $newReplacement := replaceRE "^/service/" "./" $thumbnail.RelPermalink }}
 		    <img src="{{ $newReplacement }}"/>
 		</a>
+		</figure>
 		{{ end }}
 
 	    </div>
