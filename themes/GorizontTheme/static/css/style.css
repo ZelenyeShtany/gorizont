@@ -540,7 +540,7 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 }
 
 .my-gallery figure {margin: 0;padding: 1px;width: 16%;}
-.my-gallery figure img {margin: 1px; width: 100%} /* for no-js version */
+.my-gallery figure img {margin: 1px; width: 100%;} /* for no-js version */
 /* * slideshow */
 
 .webp .slideshow-container {background-image: url(../slideshow/images/background.webp); background-repeat: no-repeat;}

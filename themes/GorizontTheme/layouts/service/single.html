@@ -4,75 +4,25 @@
     <a> &gt Наши услуги</a>
 </div>
 
+
+{{ $single_services := (where .Site.RegularPages "Type" "single_service") }}
+
 <div class="service-container">
     <div class="service-menu">
-	{{ $servicemenu := .Site.RegularPages}}
-	{{ $curaddress := .RelPermalink}}
-	{{ range $servicemenu}}
-	{{ if eq .Type "single_service" }}
+	{{ range $single_services }}
 	<a href="{{ .RelPermalink }}">{{ .Name }} </a>
 	{{ end }}
-	{{ end }}
-	<!-- <a href="/shirokoformatnaya">Широкоформатная печать</a>
-	     <a href="/lazernaya_rezka">Лазерная резка и гравировка</a>
-	     <a href="/suveniry">Сувениры, подарки, награды</a>
-	     <a href="/naruzh_i_vnutren_reklama">Наружная и внутренняя реклама</a>
-	     <a href="/brendirovanie_odezhdy">Брендирование одежды</a>
-	     <a href="/pechat_na_sportforme">Печать на спортивной форме</a>
-	     <a href="/shevrony_nashivki">Шевроны, патчи, нашивки</a>
-	     <a href="/operativnaya_poligrafiya">Оперативная полиграфия</a> -->
     </div>
 
     <div class="services">
 
+	{{ range $single_services }}
 	<div class="service">
-	    {{ $page := (.Site.GetPage "/shirokoformatnaya") }}
-	    <h1>{{ $page.Title }}</h1>
-	    {{ $page.Content }}
+	    <h1>{{ .Title }}</h1>
+	    {{ .Content }}
 	</div>
-	
-	<div class="service">
-	    {{ $page := (.Site.GetPage "/lazernaya_rezka") }}
-	    <h1>{{ $page.Title }}</h1>
-	    {{ $page.Content }}
-	</div>
-	
-	<div class="service">
-	    {{ $page := (.Site.GetPage "/suveniry") }}
-	    <h1>{{ $page.Title }}</h1>
-	    {{ $page.Content }}
-	</div>
-	
-	<div class="service">
-	    {{ $page := (.Site.GetPage "/naruzh_i_vnutren_reklama") }}
-	    <h1>{{ $page.Title }}</h1>
-	    {{ $page.Content }}
-	</div>
-	
-	<div class="service">
-	    {{ $page := (.Site.GetPage "/brendirovanie_odezhdy") }}
-	    <h1>{{ $page.Title }}</h1>
-	    {{ $page.Content }}
-	</div>
-	
-	<div class="service">
-	    {{ $page := (.Site.GetPage "/pechat_na_sportforme") }}
-	    <h1>{{ $page.Title }}</h1>
-	    {{ $page.Content }}
-	</div>
+	{{ end }}
 
-	<div class="service">
-	    {{ $page := (.Site.GetPage "/shevrony_nashivki") }}
-	    <h1>{{ $page.Title }}</h1>
-	    {{ $page.Content }}
-	</div>
-
-	<div class="service">
-	    {{ $page := (.Site.GetPage "/operativnaya_poligrafiya") }}
-	    <h1>{{ $page.Title }}</h1>
-	    {{ $page.Content }}
-	</div>
-	
 	<div class="cycle">
 	    <h1 style="text-align: center">К вашим услугам полный цикл работ</h1>
 	    <div class="w3-row-padding">
@@ -168,101 +118,23 @@
  }
  js_enabled();
 
-
- {{ $galleryimages := (.Site.GetPage "/brendirovanie_odezhdy").Resources.Match "*.jpg" }}
- var brendir = [
-     {{ range $galleryimages }}
-     {{ $thumbnail := .Fill "120x120" }}
-     [ 
-	 '{{ .RelPermalink }}',
-	 '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
-	 '{{ .Width }}x{{ .Height }}',
-	 '{{ replaceRE "\\.jpe?g$" "" .Name }}'
-     ],
-     {{ end }}
- ];
-
-
- {{ $galleryimages := (.Site.GetPage "/pechat_na_sportforme").Resources.Match "*.jpg" }}
- var sport = [
-     {{ range $galleryimages }}
-     {{ $thumbnail := .Fill "120x120" }}
-     [ 
-	 '{{ .RelPermalink }}',
-	 '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
-	 '{{ .Width }}x{{ .Height }}',
-	 '{{ replaceRE "\\.jpe?g$" "" .Name }}'
-     ],
-     {{ end }}
- ];
-
- 
- {{ $galleryimages := (.Site.GetPage "/lazernaya_rezka").Resources.Match "*.jpg" }}
- var lazer = [
-     {{ range $galleryimages }}
-     {{ $thumbnail := .Fill "120x120" }}
+ var all_galleries = [
+     {{ range $single_services}}
      [
-	 '{{ .RelPermalink }}',
-	 '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
-	 '{{ .Width }}x{{ .Height }}',
-	 '{{ replaceRE "\\.jpe?g$" "" .Name }}'
+	 {{ $galleryimages := .Resources.ByType "image" }}
+	 {{ range $galleryimages }}
+	 {{ $thumbnail := .Fill "120x120" }}
+	 [
+	     '{{ .RelPermalink }}',
+	     '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
+	     '{{ .Width }}x{{ .Height }}',
+	     '{{ replaceRE "\\.jpe?g$" "" .Name }}'
+	 ],
+	 {{ end }}
      ],
      {{ end }}
  ];
 
- {{ $galleryimages := (.Site.GetPage "/naruzh_i_vnutren_reklama").Resources.Match "*.jpg" }}
- var naruzh = [
-     {{ range $galleryimages }}
-     {{ $thumbnail := .Fill "120x120" }}
-     [ 
-	 '{{ .RelPermalink }}',
-	 '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
-	 '{{ .Width }}x{{ .Height }}',
-	 '{{ replaceRE "\\.jpe?g$" "" .Name }}'
-     ],
-     {{ end }}
- ];
-
- {{ $galleryimages := (.Site.GetPage "/operativnaya_poligrafiya").Resources.Match "*.jpg" }}
- var poligraph = [
-     {{ range $galleryimages }}
-     {{ $thumbnail := .Fill "120x120" }}
-     [ 
-	 '{{ .RelPermalink }}',
-	 '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
-	 '{{ .Width }}x{{ .Height }}',
-	 '{{ replaceRE "\\.jpe?g$" "" .Name }}'
-     ],
-     {{ end }}
- ];
-
- {{ $galleryimages := (.Site.GetPage "/shevrony_nashivki").Resources.Match "*.jpg" }}
- var shevrony = [
-     {{ range $galleryimages }}
-     {{ $thumbnail := .Fill "120x120" }}
-     [ 
-	 '{{ .RelPermalink }}',
-	 '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
-	 '{{ .Width }}x{{ .Height }}',
-	 '{{ replaceRE "\\.jpe?g$" "" .Name }}'
-     ],
-     {{ end }}
- ];
-
- {{ $galleryimages := (.Site.GetPage "/suveniry").Resources.Match "*.jpg" }}
- var suveniry = [
-     {{ range $galleryimages }}
-     {{ $thumbnail := .Fill "120x120" }}
-     [ 
-	 '{{ .RelPermalink }}',
-	 '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
-	 '{{ .Width }}x{{ .Height }}',
-	 '{{ replaceRE "\\.jpe?g$" "" .Name }}'
-     ],
-     {{ end }}
- ];
-
- 
  var initPhotoSwipeFromDOM = function(gallerySelector) {
 
      // parse slide data (url, title, size ...) from DOM elements 
@@ -505,56 +377,30 @@
 	 old_gallery.style.display = "none";
      }
 
-     var gallery_var_name;
-     switch (n) {
-	 case 1:
-	     gallery_var_name = "shirokoform";
-	     break;
-	 case 2:
-	     gallery_var_name = "lazer";
-	     break;
-	 case 3:
-	     gallery_var_name = "suveniry";
-	     break;
-	 case 4:
-	     gallery_var_name = "naruzh";
-	     break;
-	 case 5:
-	     gallery_var_name = "brendir";
-	     break;
-	 case 6:
-	     gallery_var_name = "sport";
-	     break;
-	 case 7:
-	     gallery_var_name = "shevrony";
-	     break;
-	 case 8:
-	     gallery_var_name = "poligraph";
-	     break;
-     }
-
+     var id_of_gallery_tobe_displayed = "gallery_number_"+n;
+     
      var new_gallery_container = document.createElement('div');
      new_gallery_container.setAttribute("itemscope","");
      new_gallery_container.setAttribute("itemtype","http://schema.org/ImageGallery");
      new_gallery_container.setAttribute("class","my-gallery");
-     new_gallery_container.id = gallery_var_name;
+     new_gallery_container.id = id_of_gallery_tobe_displayed;
 
-     if (window[gallery_var_name] && !document.getElementById(gallery_var_name)) {
+     if (all_galleries[n-1] && !document.getElementById(id_of_gallery_tobe_displayed)) {
 
-	 for (let i = 0; i < window[gallery_var_name].length; i++) {
+	 for (let i = 0; i < all_galleries[n-1].length; i++) {
 	     let figuretmp = document.createElement('figure');
 	     figuretmp.setAttribute("itemscope","");
 	     figuretmp.setAttribute("itemtype","http://schema.org/ImageObject");
 	     figuretmp.setAttribute("class","image");
 
 	     let atmp = document.createElement('a');
-	     atmp.setAttribute("href",window[gallery_var_name][i][0]);
+	     atmp.setAttribute("href",all_galleries[n-1][i][0]);
 	     atmp.setAttribute("itemprop","contentUrl");
-	     atmp.setAttribute("data-size",window[gallery_var_name][i][2]);
+	     atmp.setAttribute("data-size",all_galleries[n-1][i][2]);
 
 	     let imgtmp = document.createElement('img');
-	     imgtmp.setAttribute("title",window[gallery_var_name][i][3]);
-	     imgtmp.setAttribute("src",window[gallery_var_name][i][1]);
+	     imgtmp.setAttribute("title",all_galleries[n-1][i][3]);
+	     imgtmp.setAttribute("src",all_galleries[n-1][i][1]);
 	     imgtmp.setAttribute("itemprop","thumbnail");
 
 	     atmp.appendChild(imgtmp);
@@ -567,8 +413,8 @@
 	 // execute above function
 	 initPhotoSwipeFromDOM('.my-gallery');
      }
-     if(document.getElementById(gallery_var_name))
-	 document.getElementById(gallery_var_name).style.display = "flex"; 
+     if(document.getElementById(id_of_gallery_tobe_displayed))
+	 document.getElementById(id_of_gallery_tobe_displayed).style.display = "flex"; 
 
      window.history.pushState('', 'New Page Title', `?index=${n}`);
  }
