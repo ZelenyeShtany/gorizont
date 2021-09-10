@@ -139,7 +139,6 @@
 	 i++;
 	 var onclick = 'choose_service('+i+')';
 	 i--;
-	 console.log("ONCLICK: "+onclick);
 	 menu_items[i].setAttribute('onclick',onclick);
 	 menu_items[i].setAttribute('href','javascript:void(0)');
      }
@@ -150,10 +149,12 @@
  {{ $galleryimages := (.Site.GetPage "/brendirovanie_odezhdy").Resources.Match "*.jpg" }}
  var brendir = [
      {{ range $galleryimages }}
-     [ {{ $thumbnail := .Fill "120x120" }}
+     {{ $thumbnail := .Fill "120x120" }}
+     [ 
 	 '{{ .RelPermalink }}',
-       '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
-       '{{ .Width }}x{{ .Height }}'
+	 '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
+	 '{{ .Width }}x{{ .Height }}',
+	 '{{ replaceRE "\\.jpe?g$" "" .Name }}'
      ],
      {{ end }}
  ];
@@ -162,10 +163,12 @@
  {{ $galleryimages := (.Site.GetPage "/pechat_na_sportforme").Resources.Match "*.jpg" }}
  var sport = [
      {{ range $galleryimages }}
-     [ {{ $thumbnail := .Fill "120x120" }}
+     {{ $thumbnail := .Fill "120x120" }}
+     [ 
 	 '{{ .RelPermalink }}',
-       '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
-       '{{ .Width }}x{{ .Height }}'
+	 '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
+	 '{{ .Width }}x{{ .Height }}',
+	 '{{ replaceRE "\\.jpe?g$" "" .Name }}'
      ],
      {{ end }}
  ];
@@ -174,10 +177,12 @@
  {{ $galleryimages := (.Site.GetPage "/lazernaya_rezka").Resources.Match "*.jpg" }}
  var lazer = [
      {{ range $galleryimages }}
-     [ {{ $thumbnail := .Fill "120x120" }}
+     {{ $thumbnail := .Fill "120x120" }}
+     [
 	 '{{ .RelPermalink }}',
-       '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
-       '{{ .Width }}x{{ .Height }}'
+	 '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
+	 '{{ .Width }}x{{ .Height }}',
+	 '{{ replaceRE "\\.jpe?g$" "" .Name }}'
      ],
      {{ end }}
  ];
@@ -185,10 +190,12 @@
  {{ $galleryimages := (.Site.GetPage "/naruzh_i_vnutren_reklama").Resources.Match "*.jpg" }}
  var naruzh = [
      {{ range $galleryimages }}
-     [ {{ $thumbnail := .Fill "120x120" }}
+     {{ $thumbnail := .Fill "120x120" }}
+     [ 
 	 '{{ .RelPermalink }}',
-       '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
-       '{{ .Width }}x{{ .Height }}'
+	 '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
+	 '{{ .Width }}x{{ .Height }}',
+	 '{{ replaceRE "\\.jpe?g$" "" .Name }}'
      ],
      {{ end }}
  ];
@@ -196,10 +203,12 @@
  {{ $galleryimages := (.Site.GetPage "/operativnaya_poligrafiya").Resources.Match "*.jpg" }}
  var poligraph = [
      {{ range $galleryimages }}
-     [ {{ $thumbnail := .Fill "120x120" }}
+     {{ $thumbnail := .Fill "120x120" }}
+     [ 
 	 '{{ .RelPermalink }}',
-       '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
-       '{{ .Width }}x{{ .Height }}'
+	 '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
+	 '{{ .Width }}x{{ .Height }}',
+	 '{{ replaceRE "\\.jpe?g$" "" .Name }}'
      ],
      {{ end }}
  ];
@@ -207,10 +216,12 @@
  {{ $galleryimages := (.Site.GetPage "/shevrony_nashivki").Resources.Match "*.jpg" }}
  var shevrony = [
      {{ range $galleryimages }}
-     [ {{ $thumbnail := .Fill "120x120" }}
+     {{ $thumbnail := .Fill "120x120" }}
+     [ 
 	 '{{ .RelPermalink }}',
-       '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
-       '{{ .Width }}x{{ .Height }}'
+	 '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
+	 '{{ .Width }}x{{ .Height }}',
+	 '{{ replaceRE "\\.jpe?g$" "" .Name }}'
      ],
      {{ end }}
  ];
@@ -218,10 +229,12 @@
  {{ $galleryimages := (.Site.GetPage "/suveniry").Resources.Match "*.jpg" }}
  var suveniry = [
      {{ range $galleryimages }}
-     [ {{ $thumbnail := .Fill "120x120" }}
+     {{ $thumbnail := .Fill "120x120" }}
+     [ 
 	 '{{ .RelPermalink }}',
-       '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
-       '{{ .Width }}x{{ .Height }}'
+	 '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
+	 '{{ .Width }}x{{ .Height }}',
+	 '{{ replaceRE "\\.jpe?g$" "" .Name }}'
      ],
      {{ end }}
  ];
@@ -241,7 +254,6 @@
 	     item;
 
          for(var i = 0; i < numNodes; i++) {
-
 	     figureEl = thumbElements[i]; // <figure> element
 
 	     // include only element nodes 
@@ -450,11 +462,9 @@
  }, false);
  
  function choose_service(n) {
-     console.log("location.search:  "+location.search);
      var i;
      var services = document.querySelectorAll(".service, .service-subjects-only");
      var menu_items = document.querySelectorAll(".service-menu a");
-     console.log("test");
      if (n > services.length) n = 1;
      if (n < 1) n = services.length;
      for (i = 0; i < services.length; i++) {
@@ -473,7 +483,6 @@
      }
 
      var gallery_var_name;
-     console.log(n);
      switch (n) {
 	 case 1:
 	     gallery_var_name = "shirokoform";
@@ -521,7 +530,7 @@
 	     atmp.setAttribute("data-size",window[gallery_var_name][i][2]);
 
 	     let imgtmp = document.createElement('img');
-	     imgtmp.setAttribute("title",window[gallery_var_name][i][0].split('/')[1]);
+	     imgtmp.setAttribute("title",window[gallery_var_name][i][3]);
 	     imgtmp.setAttribute("src",window[gallery_var_name][i][1]);
 	     imgtmp.setAttribute("itemprop","thumbnail");
 

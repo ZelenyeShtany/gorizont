@@ -21,18 +21,17 @@
 	<div class="service">
 	    <h1>{{ .Title }}</h1>
 	    {{ .Content }}
-	    <div class="my-gallery">
+	    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
 		{{ $galleryimages := .Resources.Match "*.jpg" }}
 		{{ range $galleryimages }}
 		{{ $thumbnail := .Fill "120x120" }}
-		<figure>
-		<a href="{{ .Name }}">
-		    {{ $newReplacement := replaceRE "^/service/" "./" $thumbnail.RelPermalink }}
-		    <img src="{{ $newReplacement }}"/>
-		</a>
+		<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+		    <a itemprop="contentUrl" href="{{ .Name }}">
+			{{ $newReplacement := replaceRE "^/service/" "./" $thumbnail.RelPermalink }}
+			<img title="{{ .Name }}" itemprop="thumbnail" src="{{ $newReplacement }}"/>
+		    </a>
 		</figure>
 		{{ end }}
-
 	    </div>
 	</div>
 	
