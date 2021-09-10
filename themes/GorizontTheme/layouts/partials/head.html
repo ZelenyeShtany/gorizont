@@ -1,5 +1,7 @@
 <head>
-    <meta name="description" content="{{ .Description }}" />
+    {{ with .Description }}
+    <meta name="description" content="{{.}}" />
+    {{ end }}
     <link rel="shortcut icon" href="/favicon.png">
     <script src="/modernizr-webp-detection.js"></script>
     <script>document.documentElement.classList.remove("no-js");</script>

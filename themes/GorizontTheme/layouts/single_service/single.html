@@ -63,21 +63,6 @@
      }
      js_enabled();
 
-
-     /* {{ $galleryimages := (.Site.GetPage "/brendirovanie_odezhdy").Resources.Match "*.jpg" }}
-      * var brendir = [
-	{{ range $galleryimages }}
-	{{ $thumbnail := .Fill "120x120" }}
-	[ 
-	'{{ .RelPermalink }}',
-	'{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
-	'{{ .Width }}x{{ .Height }}',
-	'{{ replaceRE "\\.jpe?g$" "" .Name }}'
-	],
-	{{ end }}
-      * ];
-      */
-     
      var initPhotoSwipeFromDOM = function(gallerySelector) {
 
 	 // parse slide data (url, title, size ...) from DOM elements 
