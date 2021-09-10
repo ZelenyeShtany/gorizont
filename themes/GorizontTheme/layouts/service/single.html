@@ -6,48 +6,71 @@
 
 <div class="service-container">
     <div class="service-menu">
-	<a href="/shirokoformatnaya">Широкоформатная печать</a>
-	<a href="/lazernaya_rezka">Лазерная резка и гравировка</a>
-	<a href="/suveniry">Сувениры, подарки, награды</a>
-	<a href="/naruzh_i_vnutren_reklama">Наружная и внутренняя реклама</a>
-	<a href="/brendirovanie_odezhdy">Брендирование одежды</a>
-	<a href="/pechat_na_sportforme">Печать на спортивной форме</a>
-	<a href="/shevrony_nashivki">Шевроны, патчи, нашивки</a>
-	<a href="/operativnaya_poligrafiya">Оперативная полиграфия</a>
+	{{ $servicemenu := .Site.RegularPages}}
+	{{ $curaddress := .RelPermalink}}
+	{{ range $servicemenu}}
+	{{ if eq .Type "single_service" }}
+	<a href="{{ .RelPermalink }}">{{ .Name }} </a>
+	{{ end }}
+	{{ end }}
+	<!-- <a href="/shirokoformatnaya">Широкоформатная печать</a>
+	     <a href="/lazernaya_rezka">Лазерная резка и гравировка</a>
+	     <a href="/suveniry">Сувениры, подарки, награды</a>
+	     <a href="/naruzh_i_vnutren_reklama">Наружная и внутренняя реклама</a>
+	     <a href="/brendirovanie_odezhdy">Брендирование одежды</a>
+	     <a href="/pechat_na_sportforme">Печать на спортивной форме</a>
+	     <a href="/shevrony_nashivki">Шевроны, патчи, нашивки</a>
+	     <a href="/operativnaya_poligrafiya">Оперативная полиграфия</a> -->
     </div>
 
     <div class="services">
 
 	<div class="service">
-	    {{ (.Site.GetPage "/shirokoformatnaya").Content }}
+	    {{ $page := (.Site.GetPage "/shirokoformatnaya") }}
+	    <h1>{{ $page.Title }}</h1>
+	    {{ $page.Content }}
 	</div>
 	
 	<div class="service">
-	    {{ (.Site.GetPage "/lazernaya_rezka").Content }}
+	    {{ $page := (.Site.GetPage "/lazernaya_rezka") }}
+	    <h1>{{ $page.Title }}</h1>
+	    {{ $page.Content }}
 	</div>
 	
 	<div class="service">
-	    {{ (.Site.GetPage "/suveniry").Content }}
+	    {{ $page := (.Site.GetPage "/suveniry") }}
+	    <h1>{{ $page.Title }}</h1>
+	    {{ $page.Content }}
 	</div>
 	
 	<div class="service">
-	    {{ (.Site.GetPage "/naruzh_i_vnutren_reklama").Content }}
+	    {{ $page := (.Site.GetPage "/naruzh_i_vnutren_reklama") }}
+	    <h1>{{ $page.Title }}</h1>
+	    {{ $page.Content }}
 	</div>
 	
 	<div class="service">
-	    {{ (.Site.GetPage "/brendirovanie_odezhdy").Content }}
+	    {{ $page := (.Site.GetPage "/brendirovanie_odezhdy") }}
+	    <h1>{{ $page.Title }}</h1>
+	    {{ $page.Content }}
 	</div>
 	
 	<div class="service">
-	    {{ (.Site.GetPage "/pechat_na_sportforme").Content }}
+	    {{ $page := (.Site.GetPage "/pechat_na_sportforme") }}
+	    <h1>{{ $page.Title }}</h1>
+	    {{ $page.Content }}
 	</div>
 
 	<div class="service">
-	    {{ (.Site.GetPage "/shevrony_nashivki").Content }}
+	    {{ $page := (.Site.GetPage "/shevrony_nashivki") }}
+	    <h1>{{ $page.Title }}</h1>
+	    {{ $page.Content }}
 	</div>
 
 	<div class="service">
-	    {{ (.Site.GetPage "/operativnaya_poligrafiya").Content }}
+	    {{ $page := (.Site.GetPage "/operativnaya_poligrafiya") }}
+	    <h1>{{ $page.Title }}</h1>
+	    {{ $page.Content }}
 	</div>
 	
 	<div class="cycle">
