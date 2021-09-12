@@ -780,6 +780,8 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
     .slideshow-light-text {font-size: 1em}
 }
 
+/* comment */
+
 @media only screen and (max-width:360px) {
     .my-gallery figure { width: 33%; }
 }
