@@ -649,7 +649,8 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 }
 
 .w3-row-padding:after,.w3-row-padding:before
-{content:"";display:table;clear:both}
+{content:"";display:table;clear:both;}
+.w3-row-padding{padding: 0}
 
 
 
@@ -779,12 +780,6 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
 
     .slideshow-light-text {font-size: 1em}
 }
-
-/* comment */
-/* comment 2 */
-/* comment 2 */
-/* comment */
-/* comment */
 
 @media only screen and (max-width:360px) {
     .my-gallery figure { width: 33%; }

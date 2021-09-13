@@ -1,17 +1,20 @@
 {{ define "main" }}
 <div class="breadcrumbs">
     <a href="/">Главная</a>
-    <a> &gt Наши услуги</a>
+    <a> &gt; Наши услуги</a>
 </div>
 
 <div class="service-container">
-    <a></a>
     <div class="service-menu">
 	{{ $servicemenu := .Site.RegularPages}}
 	{{ $curaddress := .RelPermalink}}
 	{{ range $servicemenu}}
 	{{ if eq .Type "single_service" }}
-	<a {{ if findRE $curaddress .RelPermalink }} class="active" {{ end }}href="{{ .RelPermalink }}">{{ .Name }} </a>
+	{{ $active := "noactive"}}
+	{{ if findRE $curaddress .RelPermalink }}
+	{{ $active = "active" }}
+	{{ end }}
+	<a class="{{ $active }}" href="{{ .RelPermalink }}">{{ .Name }} </a>
 	{{ end }}
 	{{ end }}
     </div>
@@ -29,7 +32,7 @@
 		    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 			<a itemprop="contentUrl" href="{{ .Name }}">
 			    {{ $newReplacement := replaceRE "^/service/" "./" $thumbnail.RelPermalink }}
-			    <img title="{{ .Name }}" itemprop="thumbnail" src="{{ $newReplacement }}"/>
+			    <img alt="{{ .Name }}" title="{{ .Name }}" itemprop="thumbnail" src="{{ $newReplacement }}">
 			</a>
 		    </figure>
 		    {{ end }}
@@ -45,9 +48,8 @@
 		<div class="w3-third"> <a style="background-image: url('../icons/polnyi-cicl-rabot/dostavka.png')">Доставка и монтаж</a></div>
 	    </div>
 	</div>
-	
     </div>
-    <script type="application/javascript">
+    <script>
      // changing links
      function js_enabled() {
 	 var menu_items = document.querySelectorAll('.service-menu > a');
