@@ -170,17 +170,28 @@ h1,li,p.lightgray { color: #545454}
 
 @font-face {
     font-display: swap;
-    font-family:"BEBAS NEUE CYRILLIC";src:url(../fonts/BEBAS-NEUE-CYRILLIC.TTF) format("truetype")
+    font-family:"BEBAS NEUE CYRILLIC";
+    src:url(../fonts/BEBAS-NEUE-CYRILLIC.woff2) format("woff2"),
+	url(../fonts/BEBAS-NEUE-CYRILLIC.woff) format("woff"),
+	url(../fonts/BEBAS-NEUE-CYRILLIC.TTF) format("truetype");
 }
 
 @font-face {
     font-display: swap;
-    font-family:"CORBEL";src:url(../fonts/CORBEL.TTF) format("truetype")
+    font-family:"CORBEL";
+    src:url(../fonts/CORBEL.woff2) format("woff2"),
+	url(../fonts/CORBEL.woff) format("woff"),
+	url(../fonts/CORBEL.TTF) format("truetype");
 }
 
 @font-face {
     font-display: swap;
-    font-family:"CORBEL BOLD";src:url(../fonts/CORBELB.TTF) format("truetype")
+    font-family:"CORBEL BOLD";
+    src:url(../fonts/CORBELB.woff2) format("woff2"),
+	url(../fonts/CORBELB.woff) format("woff"),
+	url(../fonts/CORBELB.TTF) format("truetype");
+	
+	
 }
 
 /* * benefits */
