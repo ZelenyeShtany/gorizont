@@ -190,8 +190,6 @@ h1,li,p.lightgray { color: #545454}
     src:url(../fonts/CORBELB.woff2) format("woff2"),
 	url(../fonts/CORBELB.woff) format("woff"),
 	url(../fonts/CORBELB.TTF) format("truetype");
-	
-	
 }
 
 /* * benefits */
@@ -325,7 +323,8 @@ h1,li,p.lightgray { color: #545454}
 
 .webp .naruzh { border-right: none;background-image: url('../icons/additional-info/naruzhnaya-reklama.webp') }
 .no-webp .naruzh { border-right: none;background-image: url('../icons/additional-info/naruzhnaya-reklama.png') }
-.no-js .naruzh { border-right: none;background-image: url('../icons/additional-info/naruzhnaya-reklama.png') }/* * our clients */
+.no-js .naruzh { border-right: none;background-image: url('../icons/additional-info/naruzhnaya-reklama.png') }
+/* * our clients */
 
 .clients-logos {
     display: flex;
