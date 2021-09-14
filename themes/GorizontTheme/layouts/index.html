@@ -102,7 +102,7 @@
 <script src="/flickity.pkgd.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/flickity.css">
 
-<script src="/slideshow/slideshow.js?v=1"></script>
+<script>var flkty = new Flickity('.slideshow-container', { cellSelector: '.mySlides', lazyLoad: true});</script>
 {{ end }}
 
 
@@ -250,7 +250,60 @@
 	</picture>
     </div>
 </div>
-<script link="asdasd" src="/spoiler.js"></script>
+<script>
+
+ var clients_div_expanded = 0;
+
+ var hidden_logos = [
+     ["Компания Freshsu","Компания Freshsu","/ourclients/freshsu","width: 145px"],
+     ["Студия танцев «Горец»","Студия танцев «Горец»","/ourclients/gorec"],
+     ["Областная федерация каратэ шинкиокушинкай","Областная федерация каратэ шинкиокушинкай","/ourclients/karate"],
+     ["ОО «Алматинский областной Русский культурный центр»","ОО «Алматинский областной Русский культурный центр»","/ourclients/kcrk"],
+     ["КГУ «Специализированная детско-юношеская спортивная школа по национальным и конным видам спорта города Талдыкорган»","КГУ «Специализированная детско-юношеская спортивная школа по национальным и конным видам спорта города Талдыкорган»","/ourclients/sportshkola"],
+     ["Казахстанский котельный завод","Казахстанский котельный завод","/ourclients/teplo-standart"],
+     ["Футбольный клуб «Жетысу»","Футбольный клуб «Жетысу»","/ourclients/zhetysu2"],
+     ["Футбольная команда «Жетысу Чемпионс»","Футбольная команда «Жетысу Чемпионс»","/ourclients/zhetysu"]
+ ];
+ var logos_were_expanded_at_least_once=0;
+ function toggle_expand()
+ {
+     var logos = document.getElementsByClassName('clients-logos');
+     if (clients_div_expanded == 0)
+     {
+	 if (logos_were_expanded_at_least_once == 0) {
+	     for (let i = 0; i < hidden_logos.length; i++) {
+		 let img = document.createElement('img');
+		 img.setAttribute("title",hidden_logos[i][0]);
+		 img.setAttribute("alt",hidden_logos[i][1]);
+		 img.setAttribute("src",hidden_logos[i][2]+".png");
+		 if (hidden_logos[i].length == 4)
+		     img.setAttribute("style",hidden_logos[i][3]);
+
+		 let source = document.createElement('source');
+		 source.setAttribute("type","image/webp");
+		 source.setAttribute("srcset",hidden_logos[i][2]+".webp");
+
+		 let picture = document.createElement('picture');
+		 picture.appendChild(source);
+		 picture.appendChild(img);
+		 
+		 logos[0].appendChild(picture);
+	     }
+	     logos_were_expanded_at_least_once = 1;
+	 }
+	 logos[0].style.maxHeight = '3000px';
+	 document.getElementsByClassName("showmore")[0].innerHTML = "Скрыть";
+	 clients_div_expanded = 1;
+     }
+     else
+     {
+	 logos[0].style.maxHeight = '95px';
+	 document.getElementsByClassName("showmore")[0].innerHTML = "Показать еще";
+	 clients_div_expanded = 0;
+     }
+ }
+ document.getElementsByClassName("showmore")[0].style.display = "block";
+</script>
 
 <div class="about">
     <h1>О компании</h1>

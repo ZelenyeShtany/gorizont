@@ -32,7 +32,8 @@
 		    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 			<a itemprop="contentUrl" href="{{ .Name }}">
 			    {{ $newReplacement := replaceRE "^/service/" "./" $thumbnail.RelPermalink }}
-			    <img alt="{{ .Name }}" title="{{ .Name }}" itemprop="thumbnail" src="{{ $newReplacement }}">
+			    {{ $name := replaceRE "\\.jpe?g$" "" .Name }}
+			    <img alt="{{ $name }}" title="{{ $name }}" itemprop="thumbnail" src="{{ $newReplacement }}">
 			</a>
 		    </figure>
 		    {{ end }}
