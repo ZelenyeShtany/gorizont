@@ -63,7 +63,9 @@
 	     menu_items[i].setAttribute('href',href);
 	 }
      }
-     js_enabled();
+     // is current browser IE 6-11 [detection by feature]
+     var isIE = /*@cc_on!@*/false || !!document.documentMode;
+     if (!isIE) { js_enabled(); }
 
      var initPhotoSwipeFromDOM = function(gallerySelector) {
 
