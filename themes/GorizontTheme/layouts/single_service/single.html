@@ -121,21 +121,21 @@
 </div>
 
 <script>
- // changing links
- function js_enabled() {
-     var menu_items = document.querySelectorAll('.service-menu > a');
-     for(var i = 0;i < menu_items.length;i++)
-     {
-	 i++;
-	 var onclick = 'choose_service('+i+')';
-	 i--;
-	 menu_items[i].setAttribute('onclick',onclick);
-	 menu_items[i].setAttribute('href','javascript:void(0)');
-     }
- }
- // is current browser IE 6-11 [detection by feature]
- var isIE = /*@cc_on!@*/false || !!document.documentMode;
  if (!isIE) {
+     // changing links
+     function js_enabled() {
+	 var menu_items = document.querySelectorAll('.service-menu > a');
+	 for(var i = 0;i < menu_items.length;i++)
+	 {
+	     i++;
+	     var onclick = 'choose_service('+i+')';
+	     i--;
+	     menu_items[i].setAttribute('onclick',onclick);
+	     menu_items[i].setAttribute('href','javascript:void(0)');
+	 }
+     }
+     // is current browser IE 6-11 [detection by feature]
+     var isIE = /*@cc_on!@*/false || !!document.documentMode;
      js_enabled();
      
      var all_galleries = [
@@ -146,7 +146,7 @@
 	     {{ $thumbnail := .Fill "120x120" }}
 	     [
 		 '{{ .RelPermalink }}',
-		 '{{ replaceRE "^/service/" "./" $thumbnail.RelPermalink }}',
+		 '{{ $thumbnail.RelPermalink }}',
 		 '{{ .Width }}x{{ .Height }}',
 		 '{{ replaceRE "\\.jpe?g$" "" .Name }}'
 	     ],
@@ -162,9 +162,9 @@
      ]
      
      var initPhotoSwipeFromDOM = function(gallerySelector) {
-	     
-	     // parse slide data (url, title, size ...) from DOM elements 
-	     // (children of gallerySelector)
+	 
+	 // parse slide data (url, title, size ...) from DOM elements 
+	 // (children of gallerySelector)
 	 var parseThumbnailElements = function(el) {
              var thumbElements = el.childNodes,
 		 numNodes = thumbElements.length,
@@ -375,7 +375,7 @@
 		 });
 	 return result;
      }
-          
+     
      function choose_service(n) {
 	 var i;
 	 var services = document.querySelectorAll(".service, .service-subjects-only");
@@ -438,7 +438,11 @@
 	 var rellink = service_rel_links[n-1];
 	 window.history.pushState('', 'New Page Title', `${rellink}`);
      }
-     
+     var menu_items = document.querySelectorAll('.service-menu > a');
+     for (var i = 0; i < menu_items.length; i++) {
+	 if(menu_items[i].className.search(/active/) >= 0)
+	     choose_service(i+1);
+     }
      ///////////////////////// GALLERIES
  }
 </script>
