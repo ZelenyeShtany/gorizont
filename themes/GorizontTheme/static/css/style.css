@@ -462,7 +462,7 @@ footer li:first-child {font-family: 'CORBEL BOLD'}
     width: 100%;
 }
 
-.service {margin: 15px 0 15px 10px}
+.service {margin: 15px 0 15px 10px; display:none}
 .service>p { font-size: 18px; color: #7a7a7a; margin: 0;}
 
 .service-table td,.service-table-without-descr td {
