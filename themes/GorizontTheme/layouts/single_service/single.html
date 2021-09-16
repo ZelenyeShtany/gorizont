@@ -375,13 +375,7 @@
 		 });
 	 return result;
      }
-     
-     document.addEventListener('DOMContentLoaded', function() {
-	 if (findGetParameter("index"))
-	     choose_service(parseInt(findGetParameter("index"))); 
-	 else  choose_service(1); 
-     }, false);
-     
+          
      function choose_service(n) {
 	 var i;
 	 var services = document.querySelectorAll(".service, .service-subjects-only");
