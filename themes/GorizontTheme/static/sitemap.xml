@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
       <url>
-        <loc>https://gorizont-tdk.kz/</loc>
-        <lastmod>2021-08-01</lastmod>
+        <loc>https://gorizont-tdk.kz/</loc><lastmod>2021-08-01</lastmod>
         <!-- <changefreq>monthly</changefreq> -->
         <!-- <priority>0.8</priority> -->
       </url>
 
-      <url>
-      <loc>https://gorizont-tdk.kz/service/shirokoformatnaya</loc><lastmod>2021-08-01</lastmod></url>
-      <url><loc>https://gorizont-tdk.kz/service/lazernaya_rezka</loc><lastmod>2021-08-01</lastmod></url>
-      <url><loc>https://gorizont-tdk.kz/service/suveniry</loc><lastmod>2021-08-01</lastmod></url>
-      <url><loc>https://gorizont-tdk.kz/service/naruzh_i_vnutren_reklama</loc><lastmod>2021-08-01</lastmod></url>
-      <url><loc>https://gorizont-tdk.kz/service/brendirovanie_odezhdy</loc><lastmod>2021-08-01</lastmod></url>
-      <url><loc>https://gorizont-tdk.kz/service/pechat_na_sportforme</loc><lastmod>2021-08-01</lastmod></url>
-      <url><loc>https://gorizont-tdk.kz/service/shevrony_nashivki</loc><lastmod>2021-08-01</lastmod></url>
-      <url><loc>https://gorizont-tdk.kz/service/operativnaya_poligrafiya</loc><lastmod>2021-08-01</lastmod></url>
+      <url><loc>https://gorizont-tdk.kz/shirokoformatnaya</loc><lastmod>2021-08-01</lastmod></url>
+      <url><loc>https://gorizont-tdk.kz/lazernaya_rezka</loc><lastmod>2021-08-01</lastmod></url>
+      <url><loc>https://gorizont-tdk.kz/suveniry</loc><lastmod>2021-08-01</lastmod></url>
+      <url><loc>https://gorizont-tdk.kz/naruzh_i_vnutren_reklama</loc><lastmod>2021-08-01</lastmod></url>
+      <url><loc>https://gorizont-tdk.kz/brendirovanie_odezhdy</loc><lastmod>2021-08-01</lastmod></url>
+      <url><loc>https://gorizont-tdk.kz/pechat_na_sportforme</loc><lastmod>2021-08-01</lastmod></url>
+      <url><loc>https://gorizont-tdk.kz/shevrony_nashivki</loc><lastmod>2021-08-01</lastmod></url>
+      <url><loc>https://gorizont-tdk.kz/operativnaya_poligrafiya</loc><lastmod>2021-08-01</lastmod></url>
     </urlset>
