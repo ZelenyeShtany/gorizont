@@ -1,3 +1,4 @@
 User-agent: Yandex
 Allow: /
+Disallow: /service
 sitemap: https://gorizont-tdk.kz/sitemap.xml
