@@ -18,7 +18,7 @@
 
 	{{ range $single_services }}
 	<!-- [html-validate-disable-next attr-case,attr-spacing,no-dup-attr] -->
-	<div {{ if findRE $curaddress .RelPermalink }}style="display:inline-block" {{end}}class="service">
+	<div {{ if findRE $curaddress .RelPermalink }}style="display:inline-block"{{end}} class="service">
 	    <h1>{{ .Title }}</h1>
 	    {{ .Content }}
 	    {{ if findRE $curaddress .RelPermalink }}
@@ -441,8 +441,7 @@
 	 }
 	 if(document.getElementById(id_of_gallery_tobe_displayed))
 	     document.getElementById(id_of_gallery_tobe_displayed).style.display = "flex"; 
-	 var rellink = service_rel_links[n];
-	 console.log(rellink);
+	 var rellink = service_rel_links[n-1];
 	 window.history.pushState('', 'New Page Title', `${rellink}`);
      }
      

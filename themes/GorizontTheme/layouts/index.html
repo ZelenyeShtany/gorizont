@@ -329,46 +329,4 @@
     </div>
 </div>
 
-<script>
-
- function js_enabled() {
-     var menu_items = document.querySelectorAll('.additional-info-block');
-     for(var i = 0;i < menu_items.length;i++)
-     {
-	 var old_href = menu_items[i].parentElement.getAttribute('href');
-	 var new_href;
-	 console.log(old_href);
-	 switch (old_href)
-	 {
-	     case "./shirokoformatnaya":
-	     new_href = "service/index.html?index=1"
-	     break;
-	     case "./lazernaya_rezka":
-	     new_href = "service/index.html?index=2"
-	     break;
-	     case "./suveniry":
-	     new_href = "service/index.html?index=3"
-	     break;
-	     case "./naruzh_i_vnutren_reklama":
-	     new_href = "service/index.html?index=4"
-	     break;
-	     case "./brendirovanie_odezhdy":
-	     new_href = "service/index.html?index=5"
-	     break;
-	     case "./shevrony_nashivki":
-	     new_href = "service/index.html?index=7"
-	     break;
-	     case "./operativnaya_poligrafiya":
-	     new_href = "service/index.html?index=8"
-	     break;
-	 }
-	 // changing <a> tags
-	 menu_items[i].parentElement.setAttribute('href',new_href);
-     }
- }
- // is current browser IE 6-11 [detection by feature]
- var isIE = /*@cc_on!@*/false || !!document.documentMode;
- if (!isIE) { js_enabled(); }
- 
-</script>
 {{ end }}
