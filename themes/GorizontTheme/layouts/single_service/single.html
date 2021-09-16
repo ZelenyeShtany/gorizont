@@ -3,19 +3,13 @@
     <a href="/">Главная</a>
     <a> &gt; Наши услуги</a>
 </div>
+{{ $single_services := (where .Site.RegularPages "Type" "single_service") }}
 
 <div class="service-container">
     <div class="service-menu">
-	{{ $servicemenu := .Site.RegularPages}}
 	{{ $curaddress := .RelPermalink}}
-	{{ range $servicemenu}}
-	{{ if eq .Type "single_service" }}
-	{{ $active := "noactive"}}
-	{{ if findRE $curaddress .RelPermalink }}
-	{{ $active = "active" }}
-	{{ end }}
-	<a class="{{ $active }}" href="{{ .RelPermalink }}">{{ .Name }} </a>
-	{{ end }}
+	{{ range $single_services}}
+	<a {{ if findRE $curaddress .RelPermalink }}class="active"{{ end }} href="{{ .RelPermalink }}">{{ .Name }} </a>
 	{{ end }}
     </div>
 
