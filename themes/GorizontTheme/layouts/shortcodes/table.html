@@ -3,11 +3,11 @@
 <!-- {{ $old := "<table>" }} -->
 <!-- {{ $new := printf "<table class=\"%s\">" $class }} -->
 <!-- {{ $htmlTable := replace $htmlTable $old $new }} -->
-{{ $htmlTable := replaceRE "<th>" "<td itemscope itemtype=\"https://schema.org/Product\"><span itemprop=\"name\">" $htmlTable }}
+{{ $htmlTable := replaceRE "<th>" "<td>" $htmlTable }}
     {{ $htmlTable := replaceRE "</th>" "</td>" $htmlTable }}
 
-    {{ $htmlTable := replaceRE "<td>" "<td itemscope itemtype=\"https://schema.org/Product\"><span itemprop=\"name\">" $htmlTable }}
-    {{ $htmlTable := replaceRE "</td>" "</span></td>" $htmlTable }}
+    {{ $htmlTable := replaceRE "<td>" "<td>" $htmlTable }}
+    {{ $htmlTable := replaceRE "</td>" "</td>" $htmlTable }}
 
     {{ $htmlTable := replaceRE "</tbody>" "" $htmlTable }}
     {{ $htmlTable := replaceRE "<tbody>" "" $htmlTable }}
@@ -15,7 +15,7 @@
     {{ $htmlTable := replaceRE "<thead>" "" $htmlTable }}
     {{ $htmlTable := replaceRE "</thead>" "" $htmlTable }}
     
-    {{ $htmlTable := replaceRE "<td itemscope itemtype=\"https://schema.org/Product\"><span itemprop=\"name\"></span></td>" "" $htmlTable }}
+    {{ $htmlTable := replaceRE "<td></td>" "" $htmlTable }}
     {{ $htmlTable := replaceRE "<table +class=\".*?\" *>" "<table class=\"service-table-without-descr\" >" $htmlTable }}
     
     {{ $htmlTable | safeHTML }}

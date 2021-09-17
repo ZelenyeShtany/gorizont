@@ -1,5 +1,5 @@
 {{ $htmlTable := .Inner }}
 {{ $htmlTable := replaceRE "\n#+[ \t]+(.+)" "<table class=\"service-table\"><tr itemscope itemtype=\"https://schema.org/Product\"><td itemprop=\"name\">${1}</td><td itemprop=\"description\">" $htmlTable 1 }}
-    {{ $htmlTable := replaceRE "\n#+[ \t]+(.+)" "</td></tr><tr itemscope itemtype=\"https://schema.org/Product\"><td><span itemprop=\"name\">${1}</span><span itemprop=\"offers\" itemscope itemtype=\"https://schema.org/Offer\"><a itemprop=\"businessFunction\" href=\"http://purl.org/goodrelations/v1#ProvideService\"></a></span></td><td itemprop=\"description\">" $htmlTable }}
+    {{ $htmlTable := replaceRE "\n#+[ \t]+(.+)" "</td></tr><tr><td>${1}</td><td>" $htmlTable }}
 {{ $htmlTable := printf "%s </td></tr></table>" $htmlTable }}
 {{ $htmlTable | safeHTML }}
