@@ -9,9 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/css/style.css?v=15">
     {{ $title := print .Title " в Талдыкоргане | " .Site.Title }}
+
     {{ if eq .Title "Лазерная резка и гравировка" }}
     {{ $title = print  "Лазерная резка, лазерная гравировка в Талдыкоргане | " .Site.Title }}
     {{ end }}
+    
     {{ if .IsHome }}{{ $title = .Page.Title }}{{ end }}
 
     {{ if not .IsHome }}
